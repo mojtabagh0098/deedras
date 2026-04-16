@@ -54,7 +54,7 @@
                     <img alt="Uploaded cafe interior view"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         data-alt="Interior view of a modern cafe with wooden tables"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOBqy5k6JiVqgwRch2aDu4jfuTQKyOo8zfcyr9ZVWwJFi0Lww61Pee5fjfdm5N_dbPbJUF7ZDmf10Y2EiDJllR0QzhJ82-wl39yi1SXT4JlnA6WmVZw956sXy8QQTuKhfgeXonYPt4rKJh-9OgD8qZD8rraDVQHFaPU4DsBzj1qmaEh9-bKZFS_7V6r0gbU3iqFUxOJWfgDDd4496U16CIGklOVpHpPt8P612EyKs6atCUpkh9Z4nWMvmunxX-LH-ZrrlQ0fTcDGv8" />
+                        src="/img/biz/coffe-2.png" />
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                         <button
@@ -78,7 +78,7 @@
                     <img alt="Close up of coffee cup and pastry"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         data-alt="Close up shot of a latte and a croissant on a table"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4pusiUexOHkVGTTeZFnS7t1YGMVYN_b5Bwxd39LtkNFMqMAbVNTLJx_epqYKNYPsONtbqKuy2eEos-GE5LVa98aAbR3SJ6bl0ZnJ4NoO8-Yp6xGgcBVJMww-AB3IJvehpG67GrhH3oWlFvYxHgnSwqhlOavBGvOiTQrR7RGSu_LZ0MqGQpsjHvkbQ5qA9ejgqzCXEkdA0QoqGoStp_YCCVBNXMyJYM6I13DmKKUcdhjgqEEi9c1qBWlE7n9jjSKK0mjNankPXpMqr" />
+                        src="/img/biz/coffe.png" />
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                         <button
