@@ -54,7 +54,7 @@
                     <img alt="Uploaded cafe interior view"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         data-alt="Interior view of a modern cafe with wooden tables"
-                        src="/img/biz/coffe-2.png" />
+                        src="/img/biz/coffe-2.webp" />
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                         <button
@@ -78,7 +78,7 @@
                     <img alt="Close up of coffee cup and pastry"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         data-alt="Close up shot of a latte and a croissant on a table"
-                        src="/img/biz/coffe.png" />
+                        src="/img/biz/coffe.webp" />
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                         <button

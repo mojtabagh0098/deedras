@@ -155,7 +155,7 @@ definePageMeta({
                 <div class="px-4 pb-2">
                     <a class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100 hover:bg-slate-100 transition-colors group"
                         href="#">
-                        <img src="/img/biz/4.png" alt="Logo"
+                        <img src="/img/biz/4.webp" alt="Logo"
                             class="w-12 h-12 rounded-lg object-cover shadow-sm group-hover:scale-105 transition-transform" />
                         <div class="flex-1">
                             <h4 class="font-bold text-sm text-slate-800">کافه رستوران ونوس</h4>
@@ -287,12 +287,12 @@ definePageMeta({
                     </p>
                 </div>
                 <div class="grid grid-cols-3 px-4 gap-2 mb-6 mt-auto">
-                    <img src="/img/biz/1.png" alt="Clinic Interior"
+                    <img src="/img/biz/1.webp" alt="Clinic Interior"
                         class="w-full aspect-square object-cover hover:opacity-90 transition-opacity cursor-pointer rounded-md" />
-                    <img src="/img/biz/2.png" alt="Dental Chair"
+                    <img src="/img/biz/2.webp" alt="Dental Chair"
                         class="w-full aspect-square object-cover hover:opacity-90 transition-opacity cursor-pointer rounded-md" />
                     <div class="relative w-full aspect-square overflow-hidden cursor-pointer group rounded-md">
-                        <img src="/img/biz/3.png" alt="Reception" class="w-full h-full object-cover rounded-md" />
+                        <img src="/img/biz/3.webp" alt="Reception" class="w-full h-full object-cover rounded-md" />
                         <div
                             class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
                             <span class="text-white text-xs font-bold">+5</span>
@@ -303,7 +303,7 @@ definePageMeta({
                 <div class="px-4 pb-2">
                     <a class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100 hover:bg-slate-100 transition-colors group"
                         href="#">
-                        <img src="/img/biz/4.png" alt="Logo"
+                        <img src="/img/biz/4.webp" alt="Logo"
                             class="w-12 h-12 rounded-lg object-cover shadow-sm group-hover:scale-105 transition-transform" />
                         <div class="flex-1">
                             <h4 class="font-bold text-sm text-slate-800">کافه رستوران ونوس</h4>
