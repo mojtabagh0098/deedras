@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#eef3fa]">
+    <div class="bg-surface text-on-surface">
         <Header></Header>
         <NuxtPage />
         <Footer />

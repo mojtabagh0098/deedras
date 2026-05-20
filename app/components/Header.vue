@@ -10,7 +10,7 @@ let scrolled = ref(false);
 const showAuthModal = ref(false);
 
 function handleAuthSuccess(data) {
-  console.log('User authenticated:', data)
+    console.log('User authenticated:', data)
 }
 
 const handleScroll = () => {
@@ -47,75 +47,61 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <header class="sticky top-0 z-50 w-full border-b border-[#e8eaf3] bg-white dark:bg-[#1a1d2d] px-4 py-3 shadow-sm">
+    <header class="sticky top-0 z-50 w-full border-b border-[#e8eaf3] bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,35,111,0.05)] px-4 py-3">
         <div class="layout-container mx-auto max-w-7xl flex items-center justify-between gap-4">
             <div class="flex items-center gap-8">
                 <RouterLink to="/" class="flex items-center gap-3 text-primary hover:opacity-80 transition-opacity">
                     <div class="size-8 flex items-center justify-center bg-primary/10 rounded-full text-primary">
-                        <svg class="fill-primary text-2xl" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+                        <svg class="fill-primary text-2xl" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path>
+                        </svg>
                     </div>
-                    <h2 class="text-2xl font-black tracking-tight text-primary">دیدرس</h2>
+                    <h2 class="hidden md:block text-2xl font-black tracking-tight text-primary">دیدرس</h2>
                 </RouterLink>
-                <div class="hidden md:flex items-center gap-2">
-                    <div class="relative group">
-                        <label class="flex relative w-full z-20 group">
-                            <div class="flex items-stretch rounded-lg border-2 border-transparent transition-all duration-150 group-focus-within:border-primary">
-                                
-                                <input class="peer w-full h-10 pr-4 pl-4 rounded-r-lg border border-[#e8eaf3] bg-[#f8f9fb] text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-text-muted/70"
-                                    placeholder="جستجو برای رستوران، کافه..." type="text" />
-                                <input class="w-30 h-10 pr-4 pl-3 rounded-l-lg border border-[#e8eaf3] bg-[#f8f9fb] text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-text-muted/70"
-                                    placeholder="تهران" type="text" />
-                                <button class="absolute inset-y-0 left-0 flex items-center pl-3 text-white bg-primary hover:bg-primary/90 rounded-l-lg px-4 transition-colors z-30">
-                                    <svg class="w-[24px]" fill="#fff" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg>
-                                </button>
-                            </div>
-                        </label>
-                        <div
-                            class="absolute top-full right-0 w-full lg:w-[calc(100%+3rem)] bg-white rounded-lg shadow-xl border border-[#e8eaf3] mt-2 opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-10 overflow-hidden">
-                            <div class="p-2">
-                                <div class="text-xs font-bold text-text-muted px-3 py-2">جستجوهای اخیر</div>
-                                <a class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-md transition-colors cursor-pointer group/item"
-                                    href="#">
-                                    <svg class="w-[24px] fill-gray-400 group-hover/item:text-primary text-xl" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9m-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8z"></path></svg>
-                                    <span class="text-sm text-text-main">رستوران شاندیز</span>
-                                </a>
-                                <a class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-md transition-colors cursor-pointer group/item"
-                                    href="#">
-                                    <svg class="w-[24px] fill-gray-400 group-hover/item:text-primary text-xl" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9m-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8z"></path></svg>
-                                    
-                                    <span class="text-sm text-text-main">کافه لمیز</span>
-                                </a>
-                                <div class="border-t border-gray-100 my-2"></div>
-                                <div class="text-xs font-bold text-text-muted px-3 py-2">پیشنهادات محبوب</div>
-                                <a class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-md transition-colors cursor-pointer group/item"
-                                    href="#">
-                                    <svg class="w-[24px] fill-gray-400 group-hover/item:text-primary text-xl" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4"></path></svg>
-                                    <span class="text-sm text-text-main">رستوران‌های سنتی</span>
-                                </a>
-                                <a class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-md transition-colors cursor-pointer group/item"
-                                    href="#">
-                                    <svg class="w-[24px] fill-gray-400 group-hover/item:text-primary text-xl" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2m0 5h-2V5h2zM4 19h16v2H4z"></path></svg>
-                                    <span class="text-sm text-text-main">کافه‌های فضای باز</span>
-                                </a>
-                                <a class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-md transition-colors cursor-pointer group/item"
-                                    href="#">
-                                    <svg class="w-[24px] fill-gray-400 group-hover/item:text-primary text-xl" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1m15.03-7c0-8-15.03-8-15.03 0zM1.02 17h15v2h-15z"></path></svg>
-                                    <span class="text-sm text-text-main">فست فود</span>
-                                </a>
-                            </div>
-                        </div>
+                <div class="flex items-center bg-surface-light rounded-full px-4 w-94 md:w-96 border border-transparent transition-all">
+                    <div class="flex items-center gap-2 flex-grow">
+                        <span class="material-symbols-outlined fill-outline text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="18px"
+                                fill="#757682">
+                                <path
+                                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                            </svg>
+                        </span>
+                        <input class="bg-transparent border-none text-sm w-full py-3" placeholder="چه چیزی؟"
+                            type="text">
+                    </div>
+                    <div class="flex items-center gap-2 border-r border-outline-variant/30 pr-3 mr-3">
+                        <span class="material-symbols-outlined fill-outline text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="18px"
+                                fill="#757682">
+                                <path
+                                    d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                            </svg>
+                        </span>
+                        <span class="text-sm text-outline">تهران</span>
                     </div>
                 </div>
             </div>
-            <div class="flex items-center gap-3">
-                <RouterLink to="add-biz" class="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-bold text-text-muted hover:text-primary transition-colors">
-                    <svg class="w-[24px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 17h2v-3h1v-2l-1-5H2l-1 5v2h1v6h9v-6h4zm-6 1H4v-4h5zM2 4h15v2H2z"></path><path d="M20 18v-3h-2v3h-3v2h3v3h2v-3h3v-2z"></path></svg>
-                    <span>ثبت کسب‌وکار</span>
+            <div class="hidden md:flex items-center gap-3">
+                <RouterLink to="add-review" class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                    <span class="material-symbols-outlined text-lg fill-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                            <path
+                                d="m363-390 117-71 117 71-31-133 104-90-137-11-53-126-53 126-137 11 104 90-31 133ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
+                        </svg>
+                    </span>
+                    ثبت تجربه جدید
                 </RouterLink>
-                <button
-                    @click="showAuthModal = true"
-                    class="flex items-center justify-center h-10 px-6 rounded-lg bg-primary text-white text-sm font-bold hover:bg-primary/90 shadow-md transition-all">
-                    <span>ورود / ثبت‌نام</span>
+                <div class="h-8 w-[1px] bg-outline-variant/30 mx-2"></div>
+                <button @click="showAuthModal = true"
+                    class="flex items-center gap-2 text-primary font-bold text-sm px-4 py-2 rounded-full hover:bg-primary/5 transition-colors">
+                    <span class="material-symbols-outlined fill-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                            <path
+                                d="M367-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q560-607 560-640t-23.5-56.5Q513-720 480-720t-56.5 23.5Q400-673 400-640t23.5 56.5Q447-560 48₀−₅₆₀t₅₆.₅−₂₃.₅ZM₄₈₀−₆₄₀Zm₀ ₄₀₀Z" />
+                        </svg>
+                    </span>
+                    ورود / ثبت‌نام
                 </button>
                 <LoginModal v-model="showAuthModal" @authSuccess="handleAuthSuccess"></LoginModal>
             </div>
