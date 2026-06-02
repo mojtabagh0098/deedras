@@ -1,7 +1,4 @@
 <script setup>
-import Recommendation from './review-steps/recommendation.vue'
-import ReviewStepsFrom from './ReviewStepsFrom.vue'
-
 const selectedLocation = ref({
     id: null,           // شناسه مکان (از دیتابیس)
     name: '',           // نام مکان (مثلاً "کافه ونوس")
