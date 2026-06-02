@@ -83,7 +83,7 @@ onUnmounted(() => {
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-3">
-                <RouterLink to="add-review" class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                <button @click="$emit('openReview')" class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
                     <span class="material-symbols-outlined text-lg fill-white">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
                             <path
@@ -91,7 +91,7 @@ onUnmounted(() => {
                         </svg>
                     </span>
                     ثبت تجربه جدید
-                </RouterLink>
+                </button>
                 <div class="h-8 w-[1px] bg-outline-variant/30 mx-2"></div>
                 <button @click="showAuthModal = true"
                     class="flex items-center gap-2 text-primary font-bold text-sm px-4 py-2 rounded-full hover:bg-primary/5 transition-colors">

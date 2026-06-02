@@ -290,17 +290,7 @@ definePageMeta({
                     </p>
                 </div>
                 <div class="grid grid-cols-3 px-4 gap-2 mb-6 mt-auto">
-                    <img src="/img/biz/1.webp" alt="Clinic Interior"
-                        class="w-full aspect-square object-cover hover:opacity-90 transition-opacity cursor-pointer rounded-md" />
-                    <img src="/img/biz/2.webp" alt="Dental Chair"
-                        class="w-full aspect-square object-cover hover:opacity-90 transition-opacity cursor-pointer rounded-md" />
-                    <div class="relative w-full aspect-square overflow-hidden cursor-pointer group rounded-md">
-                        <img src="/img/biz/3.webp" alt="Reception" class="w-full h-full object-cover rounded-md" />
-                        <div
-                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
-                            <span class="text-white text-xs font-bold">+5</span>
-                        </div>
-                    </div>
+                    <img src="/img/biz/1.webp" alt="Clinic Interior" class="w-100 aspect-square object-cover hover:opacity-90 transition-opacity cursor-pointer rounded-md" />
                 </div>
                 <!-- Gallery -->
                 <div class="px-4 pb-2">

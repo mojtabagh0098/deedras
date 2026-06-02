@@ -92,7 +92,7 @@ function handleVerifyOtp(code: string) {
     // چک کن کاربر ثبت‌نام شده یا نه
     const userExists = Math.random() > 0.4 // mock
     console.log(userExists);
-    
+
     if (userExists) {
       // emit('update:step', 3)
       close()
@@ -115,24 +115,25 @@ watch(step, () => {
 <template>
   <Teleport to="body">
     <Transition name="modal">
-      <div
-        v-if="modelValue"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
-        @click.self="close"
-      >
-        <div
-          class="relative z-10 w-full max-w-[440px] flex flex-col animate-in zoom-in-95 duration-300"
-          @click.stop
-        >
+      <div v-if="modelValue" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" @click.self="close">
+        <div class="relative z-10 w-full max-w-[440px] flex flex-col animate-in zoom-in-95 duration-300" @click.stop>
           <div class="bg-white dark:bg-[#1e1e2d] rounded-xl shadow-lg border border-gray-100 dark:border-[#2d2d42] overflow-hidden">
             <!-- هدر ثابت -->
             <div class="flex items-center justify-between px-6 py-5 border-b border-gray-50 dark:border-white/5">
-              <button @click="close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors rounded-full p-1 -mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-                
+              <button @click="close"
+                class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors rounded-full p-1 -mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#1f1f1f">
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
               </button>
               <div class="flex items-center gap-2 mx-auto">
-                <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path xmlns="http://www.w3.org/2000/svg" d="M235.48-395.48h138.39l184.74-184.74q10.69-10.69 15.76-23.89 5.06-13.19 5.06-26.74 0-13.54-5.56-26.3-5.57-12.76-15.26-23.46l-36.57-37.43q-10.69-10.7-23.77-16.05-13.07-5.34-27.33-5.34-13.07 0-26.27 5.34-13.19 5.35-23.89 15.48l-185.3 184.74v138.39Zm272.65-235.65-37-37 37 37ZM306.78-466.78v-38l80.65-80.09 19.44 18 18 19.44-80.09 80.65h-38Zm100.09-100.09 18 19.44-37.44-37.44 19.44 18Zm52 171.39h265.65v-80H538.87l-80 80ZM60.78-60.78v-732.44q0-44.3 30.85-75.15 30.85-30.85 75.15-30.85h626.44q44.3 0 75.15 30.85 30.85 30.85 30.85 75.15v466.44q0 44.3-30.85 75.15-30.85 30.85-75.15 30.85H220.78l-160 160Zm126-266h606.44v-466.44H166.78v486l20-19.56Zm-20 0v-466.44 466.44Z"/></svg>
+                <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                  width="24px">
+                  <path xmlns="http://www.w3.org/2000/svg"
+                    d="M235.48-395.48h138.39l184.74-184.74q10.69-10.69 15.76-23.89 5.06-13.19 5.06-26.74 0-13.54-5.56-26.3-5.57-12.76-15.26-23.46l-36.57-37.43q-10.69-10.7-23.77-16.05-13.07-5.34-27.33-5.34-13.07 0-26.27 5.34-13.19 5.35-23.89 15.48l-185.3 184.74v138.39Zm272.65-235.65-37-37 37 37ZM306.78-466.78v-38l80.65-80.09 19.44 18 18 19.44-80.09 80.65h-38Zm100.09-100.09 18 19.44-37.44-37.44 19.44 18Zm52 171.39h265.65v-80H538.87l-80 80ZM60.78-60.78v-732.44q0-44.3 30.85-75.15 30.85-30.85 75.15-30.85h626.44q44.3 0 75.15 30.85 30.85 30.85 30.85 75.15v466.44q0 44.3-30.85 75.15-30.85 30.85-75.15 30.85H220.78l-160 160Zm126-266h606.44v-466.44H166.78v486l20-19.56Zm-20 0v-466.44 466.44Z" />
+                </svg>
                 <span class="text-primary font-bold text-xl tracking-tight">دیدرس</span>
               </div>
               <div class="w-8"></div>
@@ -140,20 +141,14 @@ watch(step, () => {
 
             <!-- محتوای مراحل - فقط یک <template> داریم -->
             <Transition name="step" mode="out-in">
-              <component 
-                :is="currentStepComponent"
-                :key="step"
-                :phone="phone"
-                @verify-otp="handleVerifyOtp"
-                @resend-otp="handleResendOtp"
-                @error="handleError"
-                @update:step="step = $event"
-              />
+              <component :is="currentStepComponent" :key="step" :phone="phone" @verify-otp="handleVerifyOtp"
+                @resend-otp="handleResendOtp" @error="handleError" @update:step="step = $event" />
             </Transition>
 
             <!-- نوار پیشرفت -->
             <div class="h-1.5 bg-gray-200 dark:bg-gray-800">
-              <div class="h-full bg-primary transition-all duration-500" :style="{ width: `${(step / 4) * 100}%` }"></div>
+              <div class="h-full bg-primary transition-all duration-500" :style="{ width: `${(step / 4) * 100}%` }">
+              </div>
             </div>
           </div>
         </div>
@@ -163,9 +158,24 @@ watch(step, () => {
 </template>
 
 <style scoped>
-.modal-enter-active, .modal-leave-active { transition: opacity 0.3s ease; }
-.modal-enter-from, .modal-leave-to { opacity: 0; }
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
 
-.step-enter-active, .step-leave-active { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-.step-enter-from, .step-leave-to { opacity: 0; transform: translateX(20px); }
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.step-enter-active,
+.step-leave-active {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-enter-from,
+.step-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}
 </style>
