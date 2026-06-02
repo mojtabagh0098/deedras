@@ -319,7 +319,7 @@ onUnmounted(() => {
                                 </div>
                             </transition>
                             <!-- بخش پیشنهاد کردن -->
-                            <Recommendation recommendation="true"></Recommendation>
+                            <ReviewStepsRecommendation recommendation="true"></ReviewStepsRecommendation>
                             <ReviewStepsImageUploader v-if="showImageUploader" />
                             <!-- <ImageUploader></ImageUploader> -->
                         </main>
