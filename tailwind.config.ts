@@ -107,6 +107,7 @@ export default {
         "on-secondary-fixed-variant": "#004395",
         "secondary": "#0058be",
         "primary-container": "#1e3a8a",
+        "star-rating": "#fbbf24",
       },
       borderRadius: {
         "DEFAULT": "0.5rem",
@@ -122,6 +123,12 @@ export default {
       },
       spacing: {
         '4.5': '1.125rem',
+        "base-unit": "4px",
+        "section-gap": "24px",
+        "margin-desktop": "24px",
+        "margin-mobile": "16px",
+        "max-width": "1400px",
+        "gutter": "16px"
       },
       width: {
         '1/3': '33.333333%',

@@ -20,11 +20,11 @@
         </a>
         <!-- Center FAB: New -->
         <div class="flex-1 flex justify-center -mt-10 relative z-10">
-            <a class="w-14 h-14 bg-gradient-to-tr from-primary to-primary-container rounded-full flex items-center justify-center shadow-lg shadow-primary/20 text-on-primary hover:opacity-90 transition-opacity" href="#">
+            <button @click="$emit('openReview')" class="w-14 h-14 bg-gradient-to-tr from-primary to-primary-container rounded-full flex items-center justify-center shadow-lg shadow-primary/20 text-on-primary hover:opacity-90 transition-opacity" href="#">
                 <span class="material-symbols-outlined text-3xl fill-white">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
                 </span>
-            </a>
+            </button>
         </div>
         <!-- Tab 4: Saved -->
         <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-200 text-[10px] font-semibold uppercase tracking-widest flex-1 transition-all duration-150 ease-in-out"

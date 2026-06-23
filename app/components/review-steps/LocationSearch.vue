@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const props = defineProps({
   modelValue: { type: Object, default: null },
@@ -10,6 +10,7 @@ const emit = defineEmits(['update:modelValue', 'addNewPlace'])
 
 const searchQuery = ref('')
 const isOpen = ref(false)
+const hasSearched = ref(false) // پرچم برای وضعیت انجام سرچ
 const selectedLocation = ref(props.modelValue)
 const componentRef = ref(null)
 
@@ -21,41 +22,54 @@ const recentLocations = ref([
 
 const suggestions = ref([])
 
-watch(searchQuery, (newVal) => {
-  if (newVal.length > 1) {
-    suggestions.value = [
+// مدیریت تایپ کاربر (جایگزین واچ برای حل باگ دبل کلیک)
+const handleSearchInput = (event) => {
+  const value = event.target.value
+  
+  if (value.length > 1) {
+    hasSearched.value = true
+    
+    // شبیه‌سازی API (اینجا می‌توانید فیلتر واقعی یا ریکوئست بزنید)
+    // برای تست حالت "یافت نشد"، مقدار آرایه را خالی [] بگذارید
+    const mockData = [
       { id: 101, name: 'کافه لمیز', category: 'کافه', address: 'تهران، ونک', rating: 4.5 },
       { id: 102, name: 'رستوران شاندیز', category: 'رستوران سنتی', address: 'تهران، تجریش', rating: 4.7 }
     ]
+
+    // فیلتر کردن بر اساس تایپ کاربر
+    suggestions.value = mockData.filter(loc => loc.name.includes(value))
     isOpen.value = true
   } else {
+    hasSearched.value = false
     suggestions.value = []
   }
-})
+}
 
 const selectLocation = (location) => {
   selectedLocation.value = location
   emit('update:modelValue', location)
   searchQuery.value = location.name
-  isOpen.value = false // بسته شدن آنی دراپ داون
+  isOpen.value = false // بسته شدن آنی و بدون بازگشت دراپ‌داون
 }
 
 // بستن دراپ‌داون در صورت کلیک به خارج از کامپوننت
 const handleClickOutside = (event) => {
+  // اگر کانتینر وجود داشت و جای دیگری خارج از این باکس کلیک شد
   if (componentRef.value && !componentRef.value.contains(event.target)) {
     isOpen.value = false
   }
 }
 
 onMounted(() => {
-  document.addEventListener('click', handleClickOutside)
+  // اضافه کردن true باعث می‌شود رویداد در فاز Capture فرود بیاید و با stop. سایر کامپوننت‌ها خراب نشود
+  document.addEventListener('click', handleClickOutside, true)
   if (selectedLocation.value) {
     searchQuery.value = selectedLocation.value.name
   }
 })
 
 onUnmounted(() => {
-  document.removeEventListener('click', handleClickOutside)
+  document.removeEventListener('click', handleClickOutside, true)
 })
 </script>
 
@@ -66,7 +80,7 @@ onUnmounted(() => {
     </label>
 
     <div 
-      class="relative flex items-center border border-slate-200 rounded-xl px-3.5 py-3 bg-slate-50/50 focus-within:bg-white focus-within:border-blue-900 focus-within:ring-4 focus-within:ring-blue-950/5 transition-all duration-200"
+      class="relative flex items-center border-2 border-gray-200 rounded-lg px-3.5 py-3 focus-within:bg-white transition-all duration-200"
     >
       <span class="text-slate-400 ml-2.5">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,8 +91,9 @@ onUnmounted(() => {
       
       <input
         v-model="searchQuery"
+        @input="handleSearchInput"
         @focus="isOpen = true"
-        :placeholder="placeholder"
+        @click.stop :placeholder="placeholder"
         class="flex-1 outline-none bg-transparent text-sm text-slate-800 placeholder:text-slate-400"
         type="text"
       />
@@ -86,7 +101,8 @@ onUnmounted(() => {
 
     <transition name="fade">
       <div v-if="isOpen" class="absolute z-50 w-full mt-1.5 bg-white rounded-xl shadow-xl border border-slate-100 py-1 max-h-[260px] overflow-y-auto">
-        <div v-if="searchQuery.length === 0">
+        
+        <div v-if="searchQuery.length <= 1">
           <div class="text-[11px] font-bold text-slate-400 my-2 px-4">مکان‌های اخیر شما</div>
           <div 
             v-for="loc in recentLocations" :key="loc.id" @click="selectLocation(loc)"
@@ -100,7 +116,7 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <div v-else>
+        <div v-else-if="suggestions.length > 0">
           <div v-for="loc in suggestions" :key="loc.id" @click="selectLocation(loc)"
             class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 cursor-pointer transition-colors"
           >
@@ -111,11 +127,18 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <div class="border-t border-slate-100 mt-1 pt-1">
-          <button @click="emit('addNewPlace')" class="w-full py-2.5 text-xs text-blue-900 hover:bg-slate-50 transition-colors font-semibold">
-            + افزودن مکان جدید
-          </button>
+        <div v-else-if="hasSearched && suggestions.length === 0" class="py-4 text-center">
+          <p class="text-sm text-slate-400 mb-3">مکانی با این نام یافت نشد.</p>
+          <div class="px-4">
+            <button 
+              @click="emit('addNewPlace')" 
+              class="w-full py-2 bg-blue-50 text-blue-900 hover:bg-blue-100/70 rounded-lg text-xs transition-colors font-bold"
+            >
+              + ثبت و افزودن این مکان به دیدرس
+            </button>
+          </div>
         </div>
+
       </div>
     </transition>
   </div>
