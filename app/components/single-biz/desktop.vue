@@ -1,3 +1,6 @@
+<script setup lang="ts">
+const isModalOpen = ref(false)
+</script>
 <template>
     <!-- Main Layout: 3-Column Grid -->
     <main class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -277,10 +280,11 @@
                 <div class="flex gap-3 items-center">
                     <img alt="User Profile" class="w-[48px] h-[48px] rounded-full shadow-sm border border-border-light"
                         src="/img/avatar/onyamalimba.png" />
-                    <button @click="$emit('openReview')"
+                    <button @click="isModalOpen = true"
                         class="flex-1 text-right bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low transition-colors rounded-full py-2.5 px-4 text-on-surface-variant font-body-md text-sm outline-none cursor-text text-start">
                         تجربه خود را از این مکان بنویسید...
                     </button>
+                    <ExperienceModal v-model="isModalOpen" />
                 </div>
                 <div class="flex justify-between items-center pl-1 pr-12">
                     <div class="flex gap-1">
@@ -441,7 +445,7 @@
             </div>
         </div>
     </main>
-</template>
+</template>ش
 <style>
 body {
     background-color: theme('colors.background');
