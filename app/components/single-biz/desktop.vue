@@ -3,9 +3,293 @@ const isModalOpen = ref(false)
 </script>
 <template>
     <!-- Main Layout: 3-Column Grid -->
-    <main class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    <main class="max-w-7xl mx-auto md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <nav
+            class="col-span-1 lg:col-span-2 hidden md:flex flex-col h-screen sticky top-0 py-6 items-center border-l dark:border-outline-variant bg-surface-container-lowest dark:bg-surface-dim shadow-sm flex-shrink-0 z-40">
+            <!-- Brand -->
+            <RouterLink class="mb-stack-lg group flex flex-col items-center gap-2" to="/">
+                <div class="flex items-center justify-center">
+                    <span class="size-12 font-eng-headline text-eng-headline font-bold">
+                        <img src="/img/logo.png" />
+                    </span>
+                </div>
+            </RouterLink>
+            <!-- Nav Links -->
+            <ul class="flex flex-col gap-4 w-full p-4">
+                <li>
+                    <RouterLink class="flex flex-col items-center gap-1 p-3 rounded-lg text-primary dark:text-primary-fixed-dim font-bold transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container duration-200 scale-95 transition-transform duration-150"
+                        to="/">
+                        <span class="material-symbols-outlined fill-primary">
+                            <svg v-if="1 != 1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                width="24px">
+                                <path
+                                    d="m335-310 202-58q20-6 34.5-20.5T592-423l58-202q3-11-5.5-19.5T625-650l-202 58q-20 6-34.5 20.5T368-537l-58 202q-3 11 5.5 19.5T335-310Zm145-110q-25 0-42.5-17.5T420-480q0-25 17.5-42.5T480-540q25 0 42.5 17.5T540-480q0 25-17.5 42.5T480-420Zm0 340q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Zm0-320Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z" />
+                            </svg>
+                        </span>
+                        <span class="font-label-sm text-label-sm">اکتشاف</span>
+                    </RouterLink>
+                </li>
+                <li>
+                    <a class="flex flex-col items-center gap-1 p-3 rounded-lg text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200"
+                        href="#">
+                        <span class="material-symbols-outlined">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                                <path
+                                    d="m600-120-240-84-186 72q-20 8-37-4.5T120-170v-560q0-13 7.5-23t20.5-15l212-72 240 84 186-72q20-8 37 4.5t17 33.5v560q0 13-7.5 23T812-192l-212 72Zm-40-98v-468l-160-56v468l160 56Zm80 0 120-40v-474l-120 46v468Zm-440-10 120-46v-468l-120 40v474Zm440-458v468-468Zm-320-56v468-468Z" />
+                            </svg>
+                            <svg v-if="1 != 1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                                width="24px">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" />
+                            </svg>
+                        </span>
+                        <span class="font-label-sm text-label-sm">نقشه</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex flex-col items-center gap-1 p-3 rounded-lg text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200"
+                        href="#">
+                        <span class="material-symbols-outlined relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                                <path
+                                    d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
+                            </svg>
+                            <svg v-if="1 != 1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                                width="24px">
+                                <path
+                                    d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
+                            </svg>
+                            <span class="absolute top-0 left-0 w-2 h-2 rounded-full bg-error"></span>
+                        </span>
+                        <span class="font-label-sm text-label-sm text-center">اعلان ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex flex-col items-center gap-1 p-3 rounded-lg text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors duration-200"
+                        href="#">
+                        <span class="material-symbols-outlined">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                                <path
+                                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+                            </svg>
+                            <svg v-if="1 != 1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                                width="24px">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+                            </svg>
+                        </span>
+                        <span class="font-label-sm text-label-sm">Saved</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- CTA -->
+            <div class="w-full px-4 mb-stack-lg">
+                <button
+                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-full hover:bg-primary-container transition-colors shadow-sm">
+                    <span class="material-symbols-outlined text-[20px]">ثبت تجربه</span>
+                </button>
+            </div>
+            <!-- Profile Mini -->
+            <div class="mt-auto pt-6 border-t border-outline-variant">
+                <div v-if="1 != 1" class="sidebar-item mb-4">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span class="hidden lg:block font-label-md">تنظیمات</span>
+                </div>
+                <div class="flex items-center gap-3 px-2">
+                    <img alt="User Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-primary"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgE8_mzo02PRP5pM23r8dcCaPDGdAfq96i4_Wh1VW6tKH73mSrC9AotynH8j3VcPT7QCLi28KeLpuxdpiIONWPop7b3zzzAasiivsUwloXWke68qt9lcE_r8PfveGo1o1G1Ki7kwUMiq_8OXwaSrF1uknnDaEVNlHRD8qdn7oy7rmT_ot3UbUSmRrsPz05qLZq0PzjtZHzAM4CUKCG2x75XzENx9iZ9qVphdXXmDS_7OYaA9Cbhkq0gmHBXTKYGud0W598mX6flI">
+                    <div class="hidden lg:block overflow-hidden">
+                        <p class="text-xs font-bold truncate">سارا احمدی</p>
+                        <p class="text-[10px] text-on-surface-variant">@sarah_arch</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Middle Column (DOM Col 2, Visual Center): Hero, Input, Feed -->
+        <div class="col-span-1 lg:col-span-6 flex flex-col gap-6 py-6">
+            <!-- Hero Banner -->
+            <div
+                class="bg-surface-container-lowest rounded-2xl shadow-sm border border-border-light overflow-hidden flex flex-col relative">
+                <div class="h-48 relative">
+                    <img alt="Cafe Interior Cover" class="w-full h-full object-cover" src="/img/biz/1.webp" />
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 to-transparent pointer-events-none">
+                    </div>
+                </div>
+                <div class="px-6 pb-6 relative bg-surface-container-lowest">
+                    <div class="flex justify-between items-end -mt-12 mb-4">
+                        <div
+                            class="w-24 h-24 rounded-full border-4 border-surface-container-lowest overflow-hidden shadow-sm bg-white relative z-10">
+                            <img alt="Company Logo" class="w-full h-full object-cover" src="/img/biz/coffe.webp" />
+                        </div>
+                        <button
+                            class="bg-primary hover:bg-blue-800 text-white px-5 py-2 rounded-full font-label-md text-sm transition-all shadow-sm flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px] fill-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,9V6h-2v3h-3v2h3v3h2v-3h3V9H20z M9,12c2.21,0,4-1.79,4-4c0-2.21-1.79-4-4-4S5,5.79,5,8C5,10.21,6.79,12,9,12z M9,6 c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2S7,9.1,7,8C7,6.9,7.9,6,9,6z M15.39,14.56C13.71,13.7,11.53,13,9,13c-2.53,0-4.71,0.7-6.39,1.56 C1.61,15.07,1,16.1,1,17.22V20h16v-2.78C17,16.1,16.39,15.07,15.39,14.56z M15,18H3v-0.78c0-0.38,0.2-0.72,0.52-0.88 C4.71,15.73,6.63,15,9,15c2.37,0,4.29,0.73,5.48,1.34C14.8,16.5,15,16.84,15,17.22V18z"/></g></svg>
+                            </span> دنبال کردن
+                        </button>
+                    </div>
+                    <div class="mb-4">
+                        <h1 class="text-2xl font-bold text-on-background mb-1 tracking-tight">کافه رستوران بلک‌برن</h1>
+                        <p class="text-on-surface-variant font-body-md text-body-md mt-1">
+                             رستوران و کافه • نیاوران
+                        </p>
+                        <p class="text-on-surface mt-2 max-w-lg">
+                            Specialty coffee, artisanal pastries, and a space for community. Open everyday 8 AM - 10 PM. ☕️✨
+                        </p>
+                        <div class="flex items-center gap-4 mt-3 text-sm text-on-surface-variant flex-wrap">
+                            <div class="flex items-center gap-1 text-on-background">
+                                <span class="material-symbols-outlined text-star-rating icon-fill text-[18px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px">
+                                        <path
+                                            d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z" />
+                                    </svg>
+                                </span>
+                                <span class="text-on-surface font-bold">آخرین تجربه:</span>
+                                ۲ روز پیش
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[18px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px">
+                                        <path
+                                            d="M40-272q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v32q0 33-23.5 56.5T600-160H120q-33 0-56.5-23.5T40-240v-32Zm800 112H738q11-18 16.5-38.5T760-240v-40q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v40q0 33-23.5 56.5T840-160ZM247-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47Zm466 0q-47 47-113 47-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113q0 66-47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q440-607 440-640t-23.5-56.5Q393-720 360-720t-56.5 23.5Q280-673 280-640t23.5 56.5Q327-560 360-560t56.5-23.5ZM360-240Zm0-400Z" />
+                                    </svg>
+                                </span>
+                                <span class="font-medium text-on-background">۸.۵k دنبال‌کننده</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-[18px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                        height="24px" viewBox="0 0 24 24" width="24px">
+                                        <rect fill="none" height="24" width="24" />
+                                        <path
+                                            d="M19,5h-2V3H7v2H5C3.9,5,3,5.9,3,7v1c0,2.55,1.92,4.63,4.39,4.94c0.63,1.5,1.98,2.63,3.61,2.96V19H7v2h10v-2h-4v-3.1 c1.63-0.33,2.98-1.46,3.61-2.96C19.08,12.63,21,10.55,21,8V7C21,5.9,20.1,5,19,5z M5,8V7h2v3.82C5.84,10.4,5,9.3,5,8z M12,14 c-1.65,0-3-1.35-3-3V5h6v6C15,12.65,13.65,14,12,14z M19,8c0,1.3-0.84,2.4-2,2.82V7h2V8z" />
+                                    </svg>
+                                </span>
+                                <span class="font-medium text-on-background">
+                                    پیشنهاد شده توسط 3 نفر
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start a Post Input (LinkedIn Style) -->
+            <div
+                class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-border-light flex flex-col gap-3">
+                <div class="flex gap-3 items-center">
+                    <img alt="User Profile" class="w-[48px] h-[48px] rounded-full shadow-sm border border-border-light"
+                        src="/img/avatar/onyamalimba.png" />
+                    <button @click="isModalOpen = true"
+                        class="flex-1 text-right bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low transition-colors rounded-full py-2.5 px-4 text-on-surface-variant font-body-md text-sm outline-none cursor-text text-start">
+                        تجربه خود را از این مکان بنویسید...
+                    </button>
+                    <ExperienceModal v-model="isModalOpen" />
+                </div>
+                <div class="flex justify-between items-center pl-1 pr-12">
+                    <div class="flex gap-1">
+                        <button
+                            class="flex items-center gap-2 text-on-surface-variant hover:bg-surface-container-low py-2 px-3 rounded-lg transition-colors font-label-md text-sm font-medium">
+                            <span class="material-symbols-outlined text-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px">
+                                    <path
+                                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0 0v-560 560Zm80-80h400q12 0 18-11t-2-21L586-459q-6-8-16-8t-16 8L450-320l-74-99q-6-8-16-8t-16 8l-80 107q-8 10-2 21t18 11Z" />
+                                </svg>
+                            </span> عکس
+                        </button>
+                        <button
+                            class="flex items-center gap-2 text-on-surface-variant hover:bg-surface-container-low py-2 px-3 rounded-lg transition-colors font-label-md text-sm font-medium">
+                            <span class="material-symbols-outlined text-emerald-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px">
+                                    <path
+                                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h480q33 0 56.5 23.5T720-720v180l126-126q10-10 22-5t12 19v344q0 14-12 19t-22-5L720-420v180q0 33-23.5 56.5T640-160H160Zm0-80h480v-480H160v480Zm0 0v-480 480Z" />
+                                </svg>
+                            </span> ویدیو
+                        </button>
+                        <button
+                            class="flex items-center gap-2 text-on-surface-variant hover:bg-surface-container-low py-2 px-3 rounded-lg transition-colors font-label-md text-sm font-medium">
+                            <span class="material-symbols-outlined text-amber-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px">
+                                    <path
+                                        d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143Zm126 18L314-169q-11 7-23 6t-21-8q-9-7-14-17.5t-2-23.5l44-189-147-127q-10-9-12.5-20.5T140-571q4-11 12-18t22-9l194-17 75-178q5-12 15.5-18t21.5-6q11 0 21.5 6t15.5 18l75 178 194 17q14 2 22 9t12 18q4 11 1.5 22.5T809-528L662-401l44 189q3 13-2 23.5T690-171q-9 7-21 8t-23-6L480-269Zm0-201Z" />
+                                </svg>
+                            </span> امتیازدهی
+                        </button>
+                    </div>
+                    <button
+                        class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-medium hover:bg-blue-800 transition-colors">ثبت</button>
+                </div>
+            </div>
+            <div class="bg-primary rounded-xl p-5 shadow-sm border border-border-light">
+                <div class="flex flex-row items-center justify-between">
+                    <h3 class="font-headline-md text-white font-bold text-center">آیا این مکان را پیشنهاد می‌کنید؟</h3>
+                    <div class="flex gap-4 justify-center">
+                        <button
+                            class="flex-2 flex items-center justify-center gap-2 bg-white text-primary border border-outline-variant hover:-translate-y-1 transition text-on-surface rounded-lg p-2 font-label-md transition">
+                            <span class="material-symbols-outlined fill-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px">
+                                    <path
+                                        d="M280-120v-520l280-280 74 74-52 206h338v176L774-120H280Zm80-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406ZM80-120v-520h200v80H160v360h120v80H80Z" />
+                                </svg>
+                            </span> بله حتما
+                        </button>
+                        <button
+                            class="flex-2 flex items-center glass justify-center gap-2 border border-outline-variant text-white rounded-lg p-2 font-label-md transition">
+                            <span class="material-symbols-outlined text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#fff">
+                                    <path
+                                        d="M240-840h440v520L400-40l-50-50q-7-7-11.5-19t-4.5-23v-14l44-174H120q-32 0-56-24t-24-56v-80q0-7 2-15t4-15l120-282q9-20 30-34t44-14Zm360 80H240L120-480v80h360l-54 220 174-174v-406Zm0 406v-406 406Zm80 34v-80h120v-360H680v-80h200v520H680Z" />
+                                </svg>
+                            </span> فعلا نه
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience Feed -->
+            <div class="flex flex-col gap-6">
+                <!-- Post 1 -->
+                <ReviewsReviewCard :experience="{
+                    id: 'exp-123',
+                    user: {
+                        name: 'سارا احمدی',
+                        avatar: '/img/avatar/ionibowcher.png',
+                        verified: true
+                    },
+                    rating: 4.5,
+                    timeAgo: '۲ ساعت پیش',
+                    text: 'امروز برای صبحانه رفتم کافه ونوس. فضای داخلی فوق‌العاده دنج بود و برخورد پرسنل هم خیلی محترمانه. پنکیک‌هاشون رو حتما پیشنهاد می‌کنم! 🥞☕️',
+                    image: '/img/biz/review-image.png',
+                    business: {
+                        id: 'cafe-venus',
+                        name: 'کافه رستوران ونوس',
+                        logo: '/img/biz/4.webp',
+                        rating: 4.8,
+                        category: 'کافه و رستوران',
+                        location: 'ولیعصر'
+                    },
+                    stats: {
+                        useful: 243,
+                        comments: 3,
+                        reposts: 1
+                    }
+                }" />
+            </div>
+        </div>
         <!-- Left Column (DOM Col 1, Visual Right in RTL): Contact/Location/Map/Hours -->
-        <div class="col-span-1 lg:col-span-3 flex flex-col gap-6 sticky top-[80px]">
+        <div class="col-span-1 lg:col-span-4 flex flex-col gap-6 py-6 sticky top-[-444px]">
             <!-- Location & Contact -->
             <div
                 class="bg-surface-container-lowest rounded-2xl shadow-sm border border-border-light flex flex-col gap-4">
@@ -105,342 +389,94 @@ const isModalOpen = ref(false)
                         </span>
                         مسیریابی
                     </button>
-                    <button
-                        class="w-full flex items-center justify-center gap-1 px-4 py-2 bg-surface-container-lowest border border-border-light rounded-lg text-on-background hover:bg-surface-container-low transition-colors text-sm font-semibold">
-                        <span class="material-symbols-outlined text-[18px]">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px">
+                </div>
+            </div>
+            <div
+                class="bg-surface-container-lowest rounded-2xl p-stack-md shadow-sm border py-3 px-5 border-outline-variant/50">
+                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-4">
+                    در یک نگاه
+                </h3>
+                <ul class="flex flex-row flex-wrap gap-3 justify-evenly">
+                    <li class="flex items-center gap-3 text-on-surface font-body-md">
+                        <span class="material-symbols-outlined text-on-surface-variant">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
                                 <path
-                                    d="M560-564v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-600q-38 0-73 9.5T560-564Zm0 220v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-380q-38 0-73 9t-67 27Zm0-110v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-490q-38 0-73 9.5T560-454ZM260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-494Z" />
+                                    d="M240-120v-720h280q100 0 170 70t70 170q0 100-70 170t-170 70H400v240H240Zm160-400h128q33 0 56.5-23.5T608-600q0-33-23.5-56.5T528-680H400v160Z" />
                             </svg>
-                        </span>
-                        مشاهده منو
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Middle Column (DOM Col 2, Visual Center): Hero, Input, Feed -->
-        <div class="col-span-1 lg:col-span-6 flex flex-col gap-6">
-            <!-- Hero Banner -->
-            <div
-                class="bg-surface-container-lowest rounded-2xl shadow-sm border border-border-light overflow-hidden flex flex-col relative">
-                <div class="h-48 relative">
-                    <img alt="Cafe Interior Cover" class="w-full h-full object-cover" src="/img/biz/1.webp" />
-                    <div
-                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 to-transparent pointer-events-none">
-                    </div>
-                </div>
-                <div class="px-6 pb-6 relative bg-surface-container-lowest">
-                    <div class="flex justify-between items-end -mt-12 mb-4">
-                        <div
-                            class="w-24 h-24 rounded-2xl border-4 border-surface-container-lowest overflow-hidden shadow-sm bg-white relative z-10">
-                            <img alt="Company Logo" class="w-full h-full object-cover" src="/img/biz/coffe.webp" />
-                        </div>
-                        <button
-                            class="bg-primary hover:bg-blue-800 text-white px-5 py-2 rounded-full font-label-md text-sm transition-all shadow-sm flex items-center gap-2">
-                            <span class="material-symbols-outlined text-[18px] fill-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px">
-                                    <path
-                                        d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z" />
-                                </svg>
-                            </span> دنبال کردن
-                        </button>
-                    </div>
-                    <div class="mb-4">
-                        <h1 class="text-2xl font-bold text-on-background mb-1 tracking-tight">کافه رستوران بلک‌برن</h1>
-                        <p class="text-on-surface-variant text-sm mb-3">رستوران و کافه • نیاوران</p>
-                        <div class="flex items-center gap-4 text-sm text-on-surface-variant flex-wrap">
-                            <div class="flex items-center gap-1 text-on-background">
-                                <span class="material-symbols-outlined text-star-rating icon-fill text-[18px]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                        width="24px">
-                                        <path
-                                            d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143Zm126 18L314-169q-11 7-23 6t-21-8q-9-7-14-17.5t-2-23.5l44-189-147-127q-10-9-12.5-20.5T140-571q4-11 12-18t22-9l194-17 75-178q5-12 15.5-18t21.5-6q11 0 21.5 6t15.5 18l75 178 194 17q14 2 22 9t12 18q4 11 1.5 22.5T809-528L662-401l44 189q3 13-2 23.5T690-171q-9 7-21 8t-23-6L480-269Zm0-201Z" />
-                                    </svg>
-                                </span>
-                                <span class="font-bold">۴.۸</span>
-                                <span class="font-medium text-on-background">(۱۲۴ نظر)</span>
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <span class="material-symbols-outlined text-[18px]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                        width="24px">
-                                        <path
-                                            d="M40-272q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v32q0 33-23.5 56.5T600-160H120q-33 0-56.5-23.5T40-240v-32Zm800 112H738q11-18 16.5-38.5T760-240v-40q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v40q0 33-23.5 56.5T840-160ZM247-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47Zm466 0q-47 47-113 47-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113q0 66-47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q440-607 440-640t-23.5-56.5Q393-720 360-720t-56.5 23.5Q280-673 280-640t23.5 56.5Q327-560 360-560t56.5-23.5ZM360-240Zm0-400Z" />
-                                    </svg>
-                                </span>
-                                <span class="font-medium text-on-background">۸.۵k دنبال‌کننده</span>
-                            </div>
-                            <div class="flex items-center gap-1.5">
-                                <span class="material-symbols-outlined text-[18px]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
-                                        height="24px" viewBox="0 0 24 24" width="24px" fill="#1f1f1f">
-                                        <rect fill="none" height="24" width="24" />
-                                        <path
-                                            d="M19,5h-2V3H7v2H5C3.9,5,3,5.9,3,7v1c0,2.55,1.92,4.63,4.39,4.94c0.63,1.5,1.98,2.63,3.61,2.96V19H7v2h10v-2h-4v-3.1 c1.63-0.33,2.98-1.46,3.61-2.96C19.08,12.63,21,10.55,21,8V7C21,5.9,20.1,5,19,5z M5,8V7h2v3.82C5.84,10.4,5,9.3,5,8z M12,14 c-1.65,0-3-1.35-3-3V5h6v6C15,12.65,13.65,14,12,14z M19,8c0,1.3-0.84,2.4-2,2.82V7h2V8z" />
-                                    </svg>
-                                </span>
-                                <span class="font-medium text-on-background">رتبه #۳ در کافه‌های تهران</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="mt-6 pt-6 border-t border-border-light bg-surface/50 rounded-xl p-5 border border-primary-container/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-2">
-                                <div
-                                    class="w-8 h-8 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
-                                    <span class="material-symbols-outlined text-[18px]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
-                                            height="18px" viewBox="0 0 24 24" width="18px">
-                                            <g>
-                                                <rect fill="none" height="24" width="24" x="0"></rect>
-                                            </g>
-                                            <g>
-                                                <g>
-                                                    <polygon
-                                                        points="19,9 20.25,6.25 23,5 20.25,3.75 19,1 17.75,3.75 15,5 17.75,6.25">
-                                                    </polygon>
-                                                    <polygon
-                                                        points="19,15 17.75,17.75 15,19 17.75,20.25 19,23 20.25,20.25 23,19 20.25,17.75">
-                                                    </polygon>
-                                                    <path
-                                                        d="M11.5,9.5L9,4L6.5,9.5L1,12l5.5,2.5L9,20l2.5-5.5L17,12L11.5,9.5z M9.99,12.99L9,15.17l-0.99-2.18L5.83,12l2.18-0.99 L9,8.83l0.99,2.18L12.17,12L9.99,12.99z">
-                                                    </path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="font-bold text-base text-on-background">خلاصه هوشمند دیدرس <span
-                                        class="text-on-surface-variant font-normal text-sm mr-1">از دیدگاه جامعه
-                                        کاربران</span></h3>
-                            </div>
-                            <div
-                                class="flex items-center gap-1 text-primary text-xs font-bold bg-primary/5 px-2 py-1 rounded">
-                                <span class="material-symbols-outlined text-[14px]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960"
-                                        width="14px">
-                                        <path
-                                            d="M168-144q-29.7 0-50.85-21.15Q96-186.3 96-216v-528q0-29.7 21.15-50.85Q138.3-816 168-816h624q29.7 0 50.85 21.15Q864-773.7 864-744v528q0 29.7-21.15 50.85Q821.7-144 792-144H168Zm0-72h624v-528H168v528Zm43-71h192v-72H211v72Zm371-73 170-170-51-51-119 119-51-51-51 51 102 102Zm-371-84h192v-72H211v72Zm0-156h192v-72H211v72Zm-43 384v-528 528Z" />
-                                    </svg>
-                                </span>
-                                <span>مبتنی بر ۱۲۴ نظر</span>
-                            </div>
-                        </div>
-                        <div class="pr-3 border-r-2 border-primary-container/30">
-                            <p class="text-body-lg text-on-background leading-relaxed mb-5">
-                                کاربران فضای کار مناسب و پریزهای برق در دسترس را تحسین می‌کنند. کیفیت قهوه نقطه قوت اصلی
-                                است، اما قیمت‌ها نسبت به میانگین منطقه بالاتر ارزیابی شده است. محیط آرام و مناسب برای
-                                تمرکز است.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="inline-flex items-center gap-1.5 bg-surface-container-lowest border border-border-light shadow-sm text-on-surface-variant text-sm px-3 py-1.5 rounded-full">
-                                    <span class="material-symbols-outlined fill-green-600 text-[18px]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960"
-                                            width="18px">
-                                            <path
-                                                d="M444-288h72v-156h156v-72H516v-156h-72v156H288v72h156v156Zm36.28 192Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Zm-.28-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z" />
-                                        </svg>
-                                    </span>
-                                    فضای کاری عالی
-                                </span>
-                                <span
-                                    class="inline-flex items-center gap-1.5 bg-surface-container-lowest border border-border-light shadow-sm text-on-surface-variant text-sm px-3 py-1.5 rounded-full">
-                                    <span class="material-symbols-outlined fill-green-600 text-[18px]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960"
-                                            width="18px">
-                                            <path
-                                                d="M444-288h72v-156h156v-72H516v-156h-72v156H288v72h156v156Zm36.28 192Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Zm-.28-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z" />
-                                        </svg>
-                                    </span>
-                                    کیفیت بالای قهوه
-                                </span>
-                                <span
-                                    class="inline-flex items-center gap-1.5 bg-surface-container-lowest border border-border-light shadow-sm text-on-surface-variant text-sm px-3 py-1.5 rounded-full">
-                                    <span class="material-symbols-outlined fill-red-500 text-[18px]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24"
-                                            width="18px">
-                                            <path d="M0 0h24v24H0V0z" fill="none" />
-                                            <path
-                                                d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-                                        </svg>
-                                    </span>
-                                    قیمت بالاتر از حد متوسط
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Start a Post Input (LinkedIn Style) -->
-            <div
-                class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-border-light flex flex-col gap-3">
-                <div class="flex gap-3 items-center">
-                    <img alt="User Profile" class="w-[48px] h-[48px] rounded-full shadow-sm border border-border-light"
-                        src="/img/avatar/onyamalimba.png" />
-                    <button @click="isModalOpen = true"
-                        class="flex-1 text-right bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low transition-colors rounded-full py-2.5 px-4 text-on-surface-variant font-body-md text-sm outline-none cursor-text text-start">
-                        تجربه خود را از این مکان بنویسید...
-                    </button>
-                    <ExperienceModal v-model="isModalOpen" />
-                </div>
-                <div class="flex justify-between items-center pl-1 pr-12">
-                    <div class="flex gap-1">
-                        <button
-                            class="flex items-center gap-2 text-on-surface-variant hover:bg-surface-container-low py-2 px-3 rounded-lg transition-colors font-label-md text-sm font-medium">
-                            <span class="material-symbols-outlined text-secondary">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="#1f1f1f">
-                                    <path
-                                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0 0v-560 560Zm80-80h400q12 0 18-11t-2-21L586-459q-6-8-16-8t-16 8L450-320l-74-99q-6-8-16-8t-16 8l-80 107q-8 10-2 21t18 11Z" />
-                                </svg>
-                            </span> عکس
-                        </button>
-                        <button
-                            class="flex items-center gap-2 text-on-surface-variant hover:bg-surface-container-low py-2 px-3 rounded-lg transition-colors font-label-md text-sm font-medium">
-                            <span class="material-symbols-outlined text-emerald-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="#1f1f1f">
-                                    <path
-                                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h480q33 0 56.5 23.5T720-720v180l126-126q10-10 22-5t12 19v344q0 14-12 19t-22-5L720-420v180q0 33-23.5 56.5T640-160H160Zm0-80h480v-480H160v480Zm0 0v-480 480Z" />
-                                </svg>
-                            </span> ویدیو
-                        </button>
-                        <button
-                            class="flex items-center gap-2 text-on-surface-variant hover:bg-surface-container-low py-2 px-3 rounded-lg transition-colors font-label-md text-sm font-medium">
-                            <span class="material-symbols-outlined text-amber-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="#1f1f1f">
-                                    <path
-                                        d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143Zm126 18L314-169q-11 7-23 6t-21-8q-9-7-14-17.5t-2-23.5l44-189-147-127q-10-9-12.5-20.5T140-571q4-11 12-18t22-9l194-17 75-178q5-12 15.5-18t21.5-6q11 0 21.5 6t15.5 18l75 178 194 17q14 2 22 9t12 18q4 11 1.5 22.5T809-528L662-401l44 189q3 13-2 23.5T690-171q-9 7-21 8t-23-6L480-269Zm0-201Z" />
-                                </svg>
-                            </span> امتیازدهی
-                        </button>
-                    </div>
-                    <button
-                        class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-medium hover:bg-blue-800 transition-colors">ثبت</button>
-                </div>
-            </div>
-            <!-- Experience Feed -->
-            <div class="flex flex-col gap-6">
-                <!-- Post 1 -->
-                <ReviewsReviewCard :experience="{
-                    id: 'exp-123',
-                    user: {
-                        name: 'سارا احمدی',
-                        avatar: '/img/avatar/ionibowcher.png',
-                        verified: true
-                    },
-                    rating: 4.5,
-                    timeAgo: '۲ ساعت پیش',
-                    text: 'امروز برای صبحانه رفتم کافه ونوس. فضای داخلی فوق‌العاده دنج بود و برخورد پرسنل هم خیلی محترمانه. پنکیک‌هاشون رو حتما پیشنهاد می‌کنم! 🥞☕️',
-                    image: '/img/biz/review-image.png',
-                    business: {
-                        id: 'cafe-venus',
-                        name: 'کافه رستوران ونوس',
-                        logo: '/img/biz/4.webp',
-                        rating: 4.8,
-                        category: 'کافه و رستوران',
-                        location: 'ولیعصر'
-                    },
-                    stats: {
-                        useful: 243,
-                        comments: 3,
-                        reposts: 1
-                    }
-                }" />
-            </div>
-        </div>
-        <!-- Right Column (DOM Col 3, Visual Left): AI Analysis, Trust Index, Metrics -->
-        <div class="col-span-1 lg:col-span-3 flex flex-col gap-6 sticky top-[80px]">
-            <!-- Trust Index (90% Donut) -->
-            <div class="flex flex-col gap-4"><!-- Trust Index Compact -->
-                <div
-                    class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm border border-border-light flex items-center justify-between">
-                    <div>
-                        <h3 class="font-bold text-sm text-on-background mb-1">شاخص اعتماد</h3>
-                        <p class="text-xs text-on-surface-variant">بر اساس تایید کاربران واقعی</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="text-right">
-                            <div class="text-2xl font-bold text-primary">۹۰٪</div>
-                            <div class="text-[10px] font-semibold text-success tracking-wider">عالی</div>
-                        </div>
-                        <div
-                            class="w-12 h-12 rounded-full border-4 border-surface-container relative flex items-center justify-center">
-                            <svg class="w-12 h-12 absolute -rotate-90" viewBox="0 0 36 36">
-                                <path class="text-primary"
-                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                                    fill="none" stroke="currentColor" stroke-dasharray="90, 100" stroke-width="4">
-                                </path>
+                        </span> پارکینگ
+                        دارد
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface font-body-md">
+                        <span class="material-symbols-outlined text-on-surface-variant">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                                <path
+                                    d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z" />
                             </svg>
-                        </div>
-                    </div>
-                </div><!-- Mini Metrics -->
-                <div class="grid grid-cols-2 gap-3">
-                    <div
-                        class="bg-surface-container-lowest rounded-2xl p-3 shadow-sm border border-border-light flex flex-col items-center text-center">
-                        <span class="font-bold text-lg text-on-background">۹۵٪</span><span
-                            class="text-[10px] text-on-surface-variant font-medium">پاسخگویی مالک</span>
-                    </div>
-                    <div
-                        class="bg-surface-container-lowest rounded-2xl p-3 shadow-sm border border-border-light flex flex-col items-center text-center">
-                        <span class="font-bold text-lg text-on-background">۲۴h</span><span
-                            class="text-[10px] text-on-surface-variant font-medium">زمان پاسخ</span>
-                    </div>
-                </div>
+                        </span> قیمت متوسط
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface font-body-md">
+                        <span class="material-symbols-outlined text-on-surface-variant">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                                <path
+                                    d="M440-80v-520H80l400-280 400 280H520v520h-80Zm40-600h146-292 146ZM120-80v-210L88-466l78-14 30 160h164v240h-80v-160h-80v160h-80Zm480 0v-240h164l30-160 78 14-32 176v210h-80v-160h-80v160h-80ZM334-680h292L480-782 334-680Z" />
+                            </svg>
+                        </span> فضای باز
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface font-body-md">
+                        <span class="material-symbols-outlined text-on-surface-variant">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                                <path
+                                    d="M438-226 296-368l58-58 84 84 168-168 58 58-226 226ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                            </svg>
+                        </span> امکان
+                        رزرو
+                    </li>
+                </ul>
             </div>
-            <!-- Performance Metrics -->
-            <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm border border-border-light">
+            <div
+                class="bg-surface-container-lowest rounded-2xl p-stack-md shadow-sm border py-3 px-5 border-outline-variant/50">
+                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-4">
+                    مکان‌های مشابه
+                </h3>
                 <div class="flex flex-col gap-4">
-                    <div>
-                        <h3 class="font-bold text-lg text-on-background leading-tight mb-2">مالک این کسب‌وکار هستید؟
-                        </h3>
-                        <div
-                            class="flex items-center gap-2 bg-blue-50 text-blue-800 text-xs font-bold px-3 py-1.5 rounded-md border border-blue-100 w-fit">
-                            <span class="material-symbols-outlined text-[16px]">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16.85 6.85l1.44 1.44-4.88 4.88-3.29-3.29c-.39-.39-1.02-.39-1.41 0l-6 6.01c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L9.41 12l3.29 3.29c.39.39 1.02.39 1.41 0l5.59-5.58 1.44 1.44c.31.31.85.09.85-.35V6.5c.01-.28-.21-.5-.49-.5h-4.29c-.45 0-.67.54-.36.85z"/></svg>
-                            </span>
-                            <span>۲۴۳ کاربر در ۳۰ روز گذشته</span>
+                    <!-- Item -->
+                    <div class="flex items-center justify-between gap-3 group cursor-pointer">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant flex-shrink-0">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Small circular logo for 'Roasters Co', minimalist typography, coffee bean graphic, monochrome style."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTgJbSjzZ4Pe_juJLmAvC1aHPsGGc96MWXbsfqHo_yEHBkD3Jvn0d6rSOYG79UAORNMr-tGKb76DJlkvAvJ0B1K8W3xWJ48X7JJvYU-y3Kkp2B1JF3ni-lC8Oo_-ZEXyJcSAJ8Y1yTMZDkaAQNjLXuXKIa3xEv9uKFdpbQOXsn36LSZXUSVUWyb2KvIDluJ-5_Q3_M2vnKQ6kSagu9tP6zFcRtpi1IPhAa4br_nYaLgkfOIhTSbD1xgS62RhAww_UbmHST3iEd2tQ">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-on-surface text-label-md group-hover:underline">سوخاری
+                                    دی</span>
+                                <span class="text-on-surface-variant text-sm mb-3">رستوران و کافه • نیاوران</span>
+                            </div>
                         </div>
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm font-bold hover:bg-surface-variant transition-colors">
+                            دنبال کردن
+                        </button>
                     </div>
-                    <p class="text-sm text-on-surface-variant leading-relaxed">
-                        پروفایل خود را به رایگان مدیریت کنید و از امکانات ویژه دیدرس بهره‌مند شوید:
-                    </p>
-                    <ul class="flex flex-col gap-2">
-                        <li class="flex items-start gap-2 text-sm text-on-background">
-                            <span class="material-symbols-outlined fill-primary text-[18px] mt-0.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.88-11.71L10 14.17l-1.88-1.88c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7c.39-.39.39-1.02 0-1.41-.39-.39-1.03-.39-1.42 0z"/></svg>
-                            </span>
-                            <span>پاسخگویی مستقیم به نظرات کاربران</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-sm text-on-background">
-                            <span class="material-symbols-outlined fill-primary text-[18px] mt-0.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.88-11.71L10 14.17l-1.88-1.88c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7c.39-.39.39-1.02 0-1.41-.39-.39-1.03-.39-1.42 0z"/></svg>
-                            </span>
-                            <span>به‌روزرسانی اطلاعات، منو و ساعات کاری</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-sm text-on-background">
-                            <span class="material-symbols-outlined fill-primary text-[18px] mt-0.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.88-11.71L10 14.17l-1.88-1.88c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7c.39-.39.39-1.02 0-1.41-.39-.39-1.03-.39-1.42 0z"/></svg>
-                            </span>
-                            <span>دسترسی به آمار و گزارش‌های بازدید</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="pt-3 border-t border-border-light/50 mt-2 bg-surface-bright/30">
-                    <button
-                        class="w-full flex items-center justify-center gap-2 text-[14px] px-4 py-3 bg-primary text-white rounded-xl hover:bg-primary/90 transition-colors shadow-sm font-semibold mb-3">
-                        <span class="material-symbols-outlined text-[20px] fill-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M708-24v-108H600v-72h108v-108h72v108h108v72H780v108h-72ZM96-168v-216H48v-72l48-192h576l48 192v72h-48v144h-72v-144H432v216H96Zm72-72h192v-144H168v144Zm-46-216h524-524ZM96-696v-72h576v72H96Zm26 240h524l-30-120H152l-30 120Z"/></svg>
-                        </span>
-                        مدیریت رایگان این پروفایل
-                    </button>
-                    <p class="text-center text-[11px] text-on-surface-variant">
-                        فرآیند تایید هویت در کمتر از ۵ دقیقه انجام می‌شود.
-                    </p>
+                    <!-- Item -->
+                    <div class="flex items-center justify-between gap-3 group cursor-pointer">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant flex-shrink-0">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Small circular logo for 'The Bakery', warm inviting bread icon, pastel background, cute social media avatar."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQFgqrH2yMj4lXCMuwU2IgaRVcgaBDyg6AkMt_1fcOW69W_iTMB2jdbcRx8ySjeWu8olXDBYPqAs_2SxaYLszAlRK-0lNms3DckAYK_NsapPgLbUPy3ESEVAY9GZ12jO5F9WyDInvSr2UjX4nHE3SnGr_2Rj15gx9eIGNdqOB5UDvgHCCt4B1m1RVK0ZZCv8y0idTXLfoGNxErHGOKQePMeEzn5IsLiunyQaMNoFX_pwZxMzyIItu62W4V8sDaYM2WB2RZ8tUy1Fc">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-on-surface text-label-md group-hover:underline">طهران
+                                    باربیکیو</span>
+                                <span class="text-on-surface-variant text-sm mb-3">رستوران و کافه • نیاوران</span>
+                            </div>
+                        </div>
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm font-bold hover:bg-surface-variant transition-colors">
+                            دنبال کردن
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -488,5 +524,12 @@ body {
     height: 96px;
     background-color: theme('colors.surface-container-lowest');
     border-radius: 50%;
+}
+
+.glass {
+    background: #ffffff14;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 </style>

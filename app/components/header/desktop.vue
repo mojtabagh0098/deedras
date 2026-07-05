@@ -50,11 +50,9 @@ onUnmounted(() => {
     <header class="sticky top-0 z-50 w-full border-b border-[#e8eaf3] bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,35,111,0.05)] px-4 py-3">
         <div class="layout-container mx-auto max-w-7xl flex items-center justify-between gap-4">
             <div class="flex items-center gap-8">
-                <RouterLink to="/" class="flex items-center gap-3 text-primary hover:opacity-80 transition-opacity">
-                    <div class="size-8 flex items-center justify-center bg-primary/10 rounded-full text-primary">
-                        <svg class="fill-primary text-2xl" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path>
-                        </svg>
+                <RouterLink to="/" class="flex items-center text-primary hover:opacity-80 transition-opacity">
+                    <div class="size-12 flex items-center justify-center text-primary">
+                        <img src="/img/logo.png" />
                     </div>
                     <h2 class="hidden md:block text-2xl font-black tracking-tight text-primary">دیدرس</h2>
                 </RouterLink>

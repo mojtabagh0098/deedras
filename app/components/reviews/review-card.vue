@@ -71,7 +71,7 @@ const hasVerified = computed(() => user.value.verified !== false)
       </div>
     </div>
     <!-- Experience Text -->
-    <div class="p-4">
+    <div class="px-4">
       <p class="text-slate-700 text-md font-medium leading-7 mb-4">
         {{ props.experience.text }}
       </p>
@@ -81,9 +81,6 @@ const hasVerified = computed(() => user.value.verified !== false)
     <!-- Post Images -->
     <div v-if="props.experience.image" class="grid grid-cols-2 gap-2 mb-4 p-4 overflow-hidden">
       <img alt="Cafe Interior"
-        class="w-full h-[240px] rounded-xl object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
-        :src="props.experience.image" :alt="props.experience.title || 'تجربه'" />
-      <img alt="Latte Art"
         class="w-full h-[240px] rounded-xl object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
         :src="props.experience.image" :alt="props.experience.title || 'تجربه'" />
     </div>

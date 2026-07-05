@@ -83,9 +83,6 @@ const hasVerified = computed(() => user.value.verified !== false)
       <img alt="Cafe Interior"
         class="w-full h-[240px] rounded-xl object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
         :src="props.experience.image" :alt="props.experience.title || 'تجربه'" />
-      <img alt="Latte Art"
-        class="w-full h-[240px] rounded-xl object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
-        :src="props.experience.image" :alt="props.experience.title || 'تجربه'" />
     </div>
     <!-- Business Info -->
     <div class="px-4 pb-2">
