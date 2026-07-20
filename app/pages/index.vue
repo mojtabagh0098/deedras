@@ -2,93 +2,56 @@
 import PrimaryButton from '~/components/PrimaryButton.vue';
 import ReviewCard from '~/components/reviews/review-card.vue';
 
-// definePageMeta({
-//     layout: 'default'
-// })
 const source = ref([
     { id: 2 },
     { id: 3 }
 ])
 </script>
 <template>
-    <!-- <NuxtLayout name="default"> -->
-        <section class="py-16 md:py-24 text-center">
-            <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tight mb-6">به دیدرس خوش آمدید</h2>
-            <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed mb-12">
-                مرجع تجربه‌های واقعی و محلی؛ جایی برای کشف بهترین‌های شهر از زبان کسانی که آنجا بوده‌اند.
+    <div class="col-span-1 lg:col-span-6 flex flex-col py-6 bg-white">
+
+        <section class="px-4">
+            <h2 class="text-3xl font-black text-primary tracking-tight mb-6">
+                دیدرس
+            </h2>
+            <p class="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                تجربه‌های واقعی مردم از مکان‌های شهر
             </p>
-            <!-- Large Hero Search Box -->
-            <div
-                class="max-w-4xl mx-auto bg-surface-container-lowest p-4 rounded-[32px] shadow-2xl shadow-primary/5 flex flex-col md:flex-row items-center gap-4">
-                <div class="w-full md:flex-1 relative">
-                    <div
-                        class="flex items-center gap-3 px-6 py-4 bg-surface-container-low rounded-2xl hover:bg-surface-container transition-colors">
-                        <span class="material-symbols-outlined text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="18px"
-                                fill="#757682">
-                                <path
-                                    d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
-                            </svg>
-                        </span>
-                        <div class="text-right">
-                            <span class="block text-[10px] text-outline font-bold uppercase">کجا؟</span>
-                            <span class="text-sm font-bold text-on-surface">انتخاب شهر</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:flex-[2] relative">
-                    <div
-                        class="flex items-center gap-3 px-6 py-4 bg-surface-container-low rounded-2xl hover:bg-surface-container transition-colors">
-                        <span class="material-symbols-outlined text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#757682" height="24px"
-                                viewBox="0 -960 960 960" width="24px">
-                                <path
-                                    d="m300-300 280-80 80-280-280 80-80 280Zm180-120q-25 0-42.5-17.5T420-480q0-25 17.5-42.5T480-540q25 0 42.5 17.5T540-480q0 25-17.5 42.5T480-420Zm0 340q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Zm0-320Z" />
-                            </svg>
-                        </span>
-                        <div class="text-right flex-grow">
-                            <span class="block text-[10px] text-outline font-bold uppercase">چه چیزی؟</span>
-                            <input
-                                class="bg-transparent border-none p-0 focus:ring-0 text-sm font-bold text-on-surface w-full"
-                                placeholder="رستوران، کافه، مرکز خرید..." type="text">
-                        </div>
-                    </div>
-                </div>
+        </section>
+        
+        <div class="sticky top-0 z-30 pt-2 pb-0 px-6 bg-surface-container-lowest/95 backdrop-blur-md border-b border-outline-variant/50 shadow-sm"
+            id="sticky-header">
+                <!-- Search Bar -->
+                <div class="bg-surface-container-lowest border border-outline-variant rounded-full h-14 flex items-center shadow-sm relative focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all mx-4">
+                <input
+                    class="flex-1 bg-transparent border-none focus:ring-0 text-body-md font-body-md px-4 placeholder:text-outline h-full"
+                    placeholder="جستجو برای مکان، تجربه، یا افراد..." type="text">
                 <button
-                    class="w-full md:w-auto px-10 py-5 bg-primary text-white rounded-[24px] font-bold text-lg hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2">
-                    <span class="material-symbols-outlined">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="18px"
-                            fill="#fff">
+                    class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shrink-0 hover:bg-primary-container transition-colors ml-1">
+                    <span class="material-symbols-outlined text-xl fill-white" data-icon="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
                             <path
                                 d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
                         </svg>
                     </span>
-                    جستجو
                 </button>
             </div>
-            <!-- Category Chips -->
-            <div class="mt-8 flex flex-wrap justify-center gap-3">
-                <span
-                    class="px-5 py-2 bg-secondary text-white rounded-full text-sm font-bold cursor-pointer transition-all hover:scale-105">رستوران
-                    و کافه</span>
-                <span
-                    class="px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-sm font-medium hover:bg-surface-container transition-all cursor-pointer">گردشگری</span>
-                <span
-                    class="px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-sm font-medium hover:bg-surface-container transition-all cursor-pointer">مراکز
-                    خرید</span>
-                <span
-                    class="px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-sm font-medium hover:bg-surface-container transition-all cursor-pointer">خدمات
-                    درمانی</span>
-                <span
-                    class="px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-sm font-medium hover:bg-surface-container transition-all cursor-pointer">ورزشی</span>
+            <!-- Feed Filter Tabs -->
+            <div class="flex mt-4 w-full">
+                <button
+                    class="flex-1 p-3 text-[14px] font-bold text-primary-container border-b-4 border-primary-container transition-colors hover:bg-surface-container-low/50 rounded-t-sm">برای
+                    شما</button>
+                <button
+                    class="flex-1 p-3 text-[14px] font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low/50 border-b-4 border-transparent transition-colors rounded-t-sm">جدیدترین‌ها</button>
+                <button
+                    class="flex-1 p-3 text-[14px] font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low/50 border-b-4 border-transparent transition-colors rounded-t-sm">پرطرفدار</button>
+                <button
+                    class="flex-1 p-3 text-[14px] font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low/50 border-b-4 border-transparent transition-colors rounded-t-sm">اطراف
+                    من</button>
             </div>
-        </section>
-        <section id="section-featured-businesses" class="max-w-2xl mx-auto pt-2 pb-14 px-4 section-clickable">
-            <div class="flex items-center justify-between mb-7 section-clickable" id="featured-businesses-header">
-                <h2 class="text-2xl font-bold text-[#22223b]" contenteditable="false">
-                    تجربه‌های اخیر
-                </h2>
-            </div>
+        </div>
+
+        <section id="section-featured-businesses" class="max-w-2xl mx-auto pb-14 section-clickable">
             <div class="flex flex-col gap-6">
                 <!-- Card 1: Restaurant -->
                 <!-- <ReviewCard v-for="(item, index) in source" :key="index" :review="item" /> -->
@@ -135,7 +98,117 @@ const source = ref([
                 </article>
             </div>
         </section>
-    <!-- </NuxtLayout> -->
+    </div>
+    <div class="col-span-1 lg:col-span-4 flex flex-col gap-6 py-6 sticky top-0">
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-5 flex flex-col gap-4">
+                <h3
+                    class="text-title-lg font-title-lg text-on-surface font-semibold text-[20px] flex items-center gap-2">
+                    <span class="material-symbols-outlined fill-tertiary-container" data-icon="trending_up">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                            <path
+                                d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z" />
+                        </svg>
+                    </span> ترندهای این هفته
+                </h3>
+                <ul class="flex flex-col">
+                    <li
+                        class="py-3 border-b border-outline-variant last:border-0 last:pb-0 first:pt-0 flex gap-3 group cursor-pointer">
+                        <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0">
+                            <img alt="موزه هنرهای معاصر"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                data-alt="A modern minimalist museum interior showcasing contemporary art, bright white walls, soft lighting, professional architecture."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5jxJusHCP2LJwnCKljgzdxlFFyoDsoc4nUmUxJxbd7G_F4pILtKp4ZVMynvgiaARV7BJGpigwuKpaiHALZSh7brobQXAVUxWVWoUZnVk7Loxj1RVVkmUvg4Sr_4sQMJ1UvD9NgDGNVv-birFkVmMnL7vwBpD3x7_1k2RvNkZuYF4kd11hy5NyWPpw4yRFvIRDbFG1LvHPxU7KHxDImqnxhcRfvZBWwGtEd916mLJOkFwChIQ7Hi5Q4YrD5a4LRPm3Ta406hNPfhI">
+                        </div>
+                        <div class="flex flex-col justify-center min-w-0">
+                            <h4
+                                class="font-label-sm text-label-sm font-bold text-on-surface truncate group-hover:text-primary transition-colors">
+                                موزه هنرهای معاصر</h4>
+                            <p class="text-[12px] text-on-surface-variant truncate mt-1">نمایشگاه جدید هنر مدرن</p>
+                            <div class="flex items-center gap-1 mt-1 text-[11px] text-on-surface-variant">
+                                <span class="material-symbols-outlined text-[12px] text-tertiary-container"
+                                    data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> ۴.۸ (۲۴۵
+                                نظر)
+                            </div>
+                        </div>
+                    </li>
+                    <li
+                        class="py-3 border-b border-outline-variant last:border-0 last:pb-0 flex gap-3 group cursor-pointer">
+                        <div
+                            class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-variant flex items-center justify-center">
+                            <img alt="بوک‌لند"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                data-alt="A sleek minimalist bookstore interior with tall wooden shelves, bright lighting, quiet and professional reading environment."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqD9h1CvINXCQToiZSjV9aO1DRLi0PzPgVK10kBM2DoLtTgDNa1y8xpQ2YFQRDW6OS5d9VX0JhdIuejFiky8NE0qu_TUthn-4NcaUpB40p_GeUqbXdZk3OviqIz_HfuXRqDqzjdNKChNdvlwK6kQuYe2TwY3fIGsvQyVfA6hj8d5LH-yJCLtM43btcI_7bI6nNWy6vN1dZsa74w81SdTzcSEKjJpH8Ys2TXPpU1saPcQ0kifZ8Tx6oT9u42T0xWFbLljW6YqsV71M">
+                        </div>
+                        <div class="flex flex-col justify-center min-w-0">
+                            <h4
+                                class="font-label-sm text-label-sm font-bold text-on-surface truncate group-hover:text-primary transition-colors">
+                                کتابفروشی بوک‌لند</h4>
+                            <p class="text-[12px] text-on-surface-variant truncate mt-1">پالادیوم</p>
+                            <div class="flex items-center gap-1 mt-1 text-[11px] text-on-surface-variant">
+                                <span class="material-symbols-outlined text-[12px] text-tertiary-container"
+                                    data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> ۴.۶ (۱۲۰
+                                نظر)
+                            </div>
+                        </div>
+                    </li>
+                    <li
+                        class="py-3 border-b border-outline-variant last:border-0 last:pb-0 flex gap-3 group cursor-pointer">
+                        <div
+                            class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-variant flex items-center justify-center">
+                            <img alt="مجموعه ورزشی"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                data-alt="A bright modern sports complex with minimal design lines, clean facilities, high-end athletic aesthetic."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEPyQfwpL6fvCwsFpSanOFVWjhIUfWdMMdXMA_C1rs_ugjLi8b2UP6Ca2L9R9Bm1P_CiZaj7uTikvEkQyW0lpMQbcWurZsKBVkMbnYr6yXp0TN43mqhaSLOXuz_ZtjhB29k9Sr_KmIhAQAqXIwWyzh5zswzhXCqhudRTqi4l16qBHDKAJpA-hRCX0mO3VMPAsJPI2oweDsJ-BFKv0Cs9HErJeJG2gnQCQl0oHCCMZkomL4ba-lqheGi2ON06eTEPQW2DI0WA7TQIQ">
+                        </div>
+                        <div class="flex flex-col justify-center min-w-0">
+                            <h4
+                                class="font-label-sm text-label-sm font-bold text-on-surface truncate group-hover:text-primary transition-colors">
+                                مجموعه ورزشی انقلاب</h4>
+                            <p class="text-[12px] text-on-surface-variant truncate mt-1">جاده تندرستی</p>
+                            <div class="flex items-center gap-1 mt-1 text-[11px] text-on-surface-variant">
+                                <span class="material-symbols-outlined text-[12px] text-tertiary-container"
+                                    data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> ۴.۷ (۳۸۰
+                                نظر)
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button
+                    class="w-full mt-2 text-primary font-label-sm text-label-sm font-bold py-2 hover:bg-surface-container-low rounded-lg transition-colors border border-outline-variant">مشاهده
+                    برترین‌ها</button>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <h3
+                    class="w-full text-title-lg font-title-lg text-on-surface font-semibold text-[20px] mb-2 flex items-center gap-2">
+                    موضوعات محبوب
+                </h3>
+                <span
+                    class="px-3 py-1.5 bg-surface-container-low rounded-full text-[13px] font-medium text-on-surface-variant hover:bg-primary hover:text-white cursor-pointer transition-colors">فضای
+                    کار</span>
+                <span
+                    class="px-3 py-1.5 bg-surface-container-low rounded-full text-[13px] font-medium text-on-surface-variant hover:bg-primary hover:text-white cursor-pointer transition-colors">قهوه
+                    تخصصی</span>
+                <span
+                    class="px-3 py-1.5 bg-surface-container-low rounded-full text-[13px] font-medium text-on-surface-variant hover:bg-primary hover:text-white cursor-pointer transition-colors">دنج</span>
+                <span
+                    class="px-3 py-1.5 bg-surface-container-low rounded-full text-[13px] font-medium text-on-surface-variant hover:bg-primary hover:text-white cursor-pointer transition-colors">قرار
+                    کاری</span>
+                <span
+                    class="px-3 py-1.5 bg-surface-container-low rounded-full text-[13px] font-medium text-on-surface-variant hover:bg-primary hover:text-white cursor-pointer transition-colors">فضای
+                    باز</span>
+                <span
+                    class="px-3 py-1.5 bg-surface-container-low rounded-full text-[13px] font-medium text-on-surface-variant hover:bg-primary hover:text-white cursor-pointer transition-colors">وای‌فای</span>
+            </div>
+            <div
+                class="flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-on-surface-variant mt-4 px-2 border-t py-2 border-surface-container-low">
+                <a class="hover:text-primary transition-colors" href="#">درباره دیدرس</a>
+                <a class="hover:text-primary transition-colors" href="#">قوانین و مقررات</a>
+                <a class="hover:text-primary transition-colors" href="#">حریم خصوصی</a>
+                <a class="hover:text-primary transition-colors" href="#">کسب‌وکارها</a>
+                <span class="w-full mt-2 text-outline">© ۱۴۰۵ پلتفرم دیدرس</span>
+            </div>
+    </div>
 </template>
 <style>
 .review-box-gradient {

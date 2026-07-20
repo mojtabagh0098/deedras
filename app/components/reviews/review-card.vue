@@ -20,7 +20,7 @@ const hasVerified = computed(() => user.value.verified !== false)
 
 <template>
   <article
-    class="w-54 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full group"
+    class="w-54 bg-white shadow-md border-b border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full group"
     data-purpose="business-card">
     <!-- Header: User Info -->
     <div class="py-3 px-4 flex justify-between items-start">
@@ -46,30 +46,6 @@ const hasVerified = computed(() => user.value.verified !== false)
         </svg>
       </button>
     </div>
-    <div class="flex items-center gap-3 px-4">
-      <div class="flex gap-0.5">
-        <span class="material-symbols-outlined fill-star-rating icon-fill text-[18px]">
-          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="18px" viewBox="0 0 24 24" width="18px"><g><rect fill="none" height="24" width="24"/><path d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z"/></g></svg>
-        </span>
-        <span class="material-symbols-outlined fill-star-rating icon-fill text-[18px]">
-          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="18px" viewBox="0 0 24 24" width="18px"><g><rect fill="none" height="24" width="24"/><path d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z"/></g></svg>
-        </span>
-        <span class="material-symbols-outlined fill-star-rating icon-fill text-[18px]">
-          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="18px" viewBox="0 0 24 24" width="18px"><g><rect fill="none" height="24" width="24"/><path d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z"/></g></svg>
-        </span>
-        <span class="material-symbols-outlined fill-star-rating icon-fill text-[18px]">
-          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="18px" viewBox="0 0 24 24" width="18px"><g><rect fill="none" height="24" width="24"/><path d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z"/></g></svg>
-        </span>
-        <span class="material-symbols-outlined fill-star-rating text-[18px]">
-           <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="18px" viewBox="0 0 24 24" width="18px"><g><g><path d="M0,0h24v24H0V0z" fill="none"/></g></g><g><path d="M12,8.89L12.94,12h2.82l-2.27,1.62l0.93,3.01L12,14.79l-2.42,1.84l0.93-3.01L8.24,12h2.82L12,8.89 M9.58,10H5.12 c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81 c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6c0.79-0.57,0.39-1.81-0.58-1.81h-4.46l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0 L9.58,10z"/></g></svg>
-        </span>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-1 rounded font-medium">فضای کار</span>
-        <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-1 rounded font-medium">کیفیت
-          قهوه</span>
-      </div>
-    </div>
     <!-- Experience Text -->
     <div class="px-4">
       <p class="text-slate-700 text-md font-medium leading-7 mb-4">
@@ -77,12 +53,18 @@ const hasVerified = computed(() => user.value.verified !== false)
       </p>
     </div>
 
-    <!-- Main Image -->
+    
+    <div class="flex items-center gap-3 px-4">
+      <div class="flex gap-2">
+        <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-1 rounded font-medium">فضای کار</span>
+        <span class="text-xs bg-surface-container text-on-surface-variant px-2 py-1 rounded font-medium">کیفیت
+          قهوه</span>
+      </div>
+    </div>
+
     <!-- Post Images -->
-    <div v-if="props.experience.image" class="grid grid-cols-2 gap-2 mb-4 p-4 overflow-hidden">
-      <img alt="Cafe Interior"
-        class="w-full h-[240px] rounded-xl object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
-        :src="props.experience.image" :alt="props.experience.title || 'تجربه'" />
+    <div v-if="props.experience.image" class="w-full overflow-hidden my-2 border border-surface-container-low">
+      <img alt="عکس کافه" class="w-full h-auto object-cover max-h-[400px]"  :src="props.experience.image" :alt="props.experience.title || 'تجربه'" />
     </div>
     <!-- Business Info -->
     <div class="px-4 pb-2">
