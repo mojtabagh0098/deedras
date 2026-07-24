@@ -12,7 +12,7 @@
                 </div>
                 <input
                     class="flex-1 bg-transparent border-none focus:ring-0 text-body-md font-body-md pl-12 pr-12 py-4 placeholder:text-outline"
-                    placeholder="جستجو برای مکان، تجربه، یا افراد..." type="text">
+                    placeholder="جستجوی مکان، کافه، رستوران یا دسته‌بندی..." type="text">
                 <button class="absolute inset-y-1.5 left-1.5 w-11 h-11 bg-primary fill-white rounded-full flex items-center justify-center hover:bg-blue-900 transition-colors" data-icon="search">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-120v-240h80v80h320v80H520v80h-80Zm-320-80v-80h240v80H120Zm160-160v-80H120v-80h160v-80h80v240h-80Zm160-80v-80h400v80H440Zm160-160v-240h80v80h160v80H680v80h-80Zm-480-80v-80h400v80H120Z"/></svg>
                 </button>
@@ -110,6 +110,51 @@
 
     </div>
     <div class="col-span-4 flex flex-col gap-6 py-6 sticky top-0">
+        <div class="bg-surface-white rounded-3xl shadow-sm border border-border-light p-5">
+            <h2 class="text-label-md font-label-md text-text-primary mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined fill-on-surface-variant text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z" />
+                    </svg>
+                </span>
+                فیلترهای پیشرفته
+            </h2>
+            <div class="flex flex-col gap-4">
+                <label class="flex items-center justify-between cursor-pointer">
+                    <span class="text-body-sm text-text-primary">الان باز است</span>
+                    <div class="relative">
+                        <input checked="" class="sr-only peer" type="checkbox">
+                        <div
+                            class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                        </div>
+                    </div>
+                </label>
+                <label class="flex items-center justify-between cursor-pointer">
+                    <span class="text-body-sm text-text-primary">فضای باز</span>
+                    <div class="relative">
+                        <input class="sr-only peer" type="checkbox">
+                        <div
+                            class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                        </div>
+                    </div>
+                </label>
+                <label class="flex items-center justify-between cursor-pointer">
+                    <span class="text-body-sm text-text-primary">مناسب کار با لپ‌تاپ</span>
+                    <div class="relative">
+                        <input checked="" class="sr-only peer" type="checkbox">
+                        <div
+                            class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <button
+                class="w-full mt-5 py-2 text-primary rounded-xl text-label-sm font-label-sm hover:bg-gray-50 transition-colors border border-transparent hover:border-border-light">
+                نمایش تمام فیلترها
+            </button>
+        </div>
         <div class="bg-white rounded-3xl shadow-sm border border-border-light p-5">
             <h2 class="text-label-md font-label-md text-text-primary mb-4 flex items-center gap-2">
                 <span class="material-symbols-outlined text-on-surface-variant text-lg">
@@ -192,51 +237,6 @@
                     </button>
                 </div>
             </div>
-        </div>
-        <div class="bg-surface-white rounded-3xl shadow-sm border border-border-light p-5">
-            <h2 class="text-label-md font-label-md text-text-primary mb-4 flex items-center gap-2">
-                <span class="material-symbols-outlined fill-on-surface-variant text-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
-                        <path d="M0 0h24v24H0V0z" fill="none" />
-                        <path
-                            d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z" />
-                    </svg>
-                </span>
-                فیلترهای پیشرفته
-            </h2>
-            <div class="flex flex-col gap-4">
-                <label class="flex items-center justify-between cursor-pointer">
-                    <span class="text-body-sm text-text-primary">الان باز است</span>
-                    <div class="relative">
-                        <input checked="" class="sr-only peer" type="checkbox">
-                        <div
-                            class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
-                        </div>
-                    </div>
-                </label>
-                <label class="flex items-center justify-between cursor-pointer">
-                    <span class="text-body-sm text-text-primary">فضای باز</span>
-                    <div class="relative">
-                        <input class="sr-only peer" type="checkbox">
-                        <div
-                            class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
-                        </div>
-                    </div>
-                </label>
-                <label class="flex items-center justify-between cursor-pointer">
-                    <span class="text-body-sm text-text-primary">مناسب کار با لپ‌تاپ</span>
-                    <div class="relative">
-                        <input checked="" class="sr-only peer" type="checkbox">
-                        <div
-                            class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
-                        </div>
-                    </div>
-                </label>
-            </div>
-            <button
-                class="w-full mt-5 py-2 text-primary rounded-xl text-label-sm font-label-sm hover:bg-gray-50 transition-colors border border-transparent hover:border-border-light">
-                نمایش تمام فیلترها
-            </button>
         </div>
 
         <div

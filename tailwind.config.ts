@@ -109,7 +109,6 @@ export default {
         "primary-container": "#1e3a8a",
         "star-rating": "#fbbf24",
         "surface-white": "#FFFFFF",
-        "on-surface-variant": "#444651",
         "text-primary": "#212529",
       },
       borderRadius: {
