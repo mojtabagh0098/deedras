@@ -110,6 +110,7 @@ export default {
         "star-rating": "#fbbf24",
         "surface-white": "#FFFFFF",
         "text-primary": "#212529",
+        "badge-container": "#e6eff8"
       },
       borderRadius: {
         "DEFAULT": "0.5rem",
