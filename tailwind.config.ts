@@ -59,6 +59,7 @@ export default {
         "surface-light": "#f3f4f6",
         "surface-dark": "#1e293b",
         "outline": "#757682",
+        "border-outline": "#DADCE0",
         "outline-variant": "#c5c5d3",
         "surface-bright": "#f7f9fb",
         "on-surface": "#191c1e",
@@ -110,7 +111,8 @@ export default {
         "star-rating": "#fbbf24",
         "surface-white": "#FFFFFF",
         "text-primary": "#212529",
-        "badge-container": "#e6eff8"
+        "badge-container": "#e6eff8",
+        "primary-dark": "#001a52"
       },
       borderRadius: {
         "DEFAULT": "0.5rem",
@@ -143,6 +145,7 @@ export default {
         "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
         "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
         "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
         "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
         "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
         "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],

@@ -36,13 +36,13 @@
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-1 mb-2">
                         <img alt="کاربر"
-                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark z-10"
+                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4mbkBikx_I1WqnDwivC5ldr-A9Wp_kwsIg1vrV635zUaFqsQEQmuilITyj_z4cb6xysCgBAyNU495J1OgZBaXOMV2lSq3R94R73FeMPdGQdXzumYycWwIe8IGkCwNPC6Zh5_crszoP27UBE3-pxhR_zaNgeIow3PV4_OzupRIUkPLduEffpuagkcrDS3zFiN11KnXkmsDgBr_yZW1ZQphfxveRpn6zjm6Ixorr_CjOeeL7KJAq0eKNvwU9NI7_OyfOdjUqnvHSOM">
                         <img alt="کاربر"
-                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark -mr-3 z-20"
+                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark -mr-3"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXL47phmAJERdqLRGjIEMJefLJj58OIBjwLuNdsuunO1XHuEAZIxpQ1-_s56ussbWHLVIVU7IE8wwzpnnqZ_SRfswhvs9Ni1ofA6pr1gvWKlGXp6NpoUWq4uZ5AJSrUb7FhO4Nf4e1WeZRA7H5YboHBQtgyjpA4_0cz3sG0i6QUxna6QQiNw6cDnPzIdn-PooydLbIVy-hLoiCdMl6h3cXBVoy1quZK9QR-BeO9vHohg09Hg8idLO_prljIJ8OZb_LnWZiy4eF4G8">
                         <img alt="کاربر"
-                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark -mr-3 z-30"
+                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark -mr-3"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8cRYJIOfl8pUaUhPbesqHgMuultsEI2PbiW3yTt00GNg9t9S_Vk7SrFwvl5-uRLgrheXQDTpM-NWzHXrUU1RZtm-ulty6sGCrKxUk0Xe3tvGttbJKELG-LOGbQEj20Ag8-j326uIS_K9dyMHw5uXCTNprYlsvfJ2JiO925q2KKqi-8Bm4tVlZbIL2RxxMMNQRW6hUgl8FwUvWoOstkWyxyYJYC-aSDfkkDYADk6w_ZEIpx_mHIxf6aZaKN5KG1GRmqBAuBhczlzo">
                     </div>
                     <p class="text-sm">
