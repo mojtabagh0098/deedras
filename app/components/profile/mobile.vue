@@ -41,7 +41,7 @@
             <div class="flex justify-between items-end -mt-[50px] mb-4">
                 <!-- Avatar -->
                 <div class="relative">
-                    <div class="w-24 h-24 rounded-full border-4 border-white overflow-hidden bg-gray-200 shadow-md">
+                    <div class="w-24 h-24 rounded-full border-1 border-white overflow-hidden bg-gray-200 shadow-md">
                         <img alt="Arash Rad Avatar" class="w-full h-full object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7xFKxvqn2BcFtweoX3NhLCXXm21YF-GYs1ejBkZT6cTkkCOMLbf7-iHWoPo5VnlX1GT9VEj0slwWLxHnAMBXA6m6qHxXecN37KIu-25wVHCppycM_o76mNQLbmWJyAjYk8sJHpi3tjC_ClhxtZq8Jwl2xNUorXkcVBJrrqo9IplsQkZpbE7niTVO9du6zsQiPCbmvdUq3tXmN-R7DU8p5s7b1daY5K9x3zj9KQQFFe5Kb1m-Tjj4Rc-uEDZZ3tEcBJPQ-HbR4uD0">
                     </div>
@@ -107,55 +107,45 @@
             </div>
         </div>
     </header>
+    <div class="flex border-b border-border bg-white sticky top-[53px] z-40" data-purpose="profile-tabs">
+        <button class="flex-1 py-3 text-sm font-bold text-primary border-b-2 border-primary text-center">
+            تجربه‌ها
+        </button>
+        <button class="flex-1 py-3 text-sm font-medium text-textSub hover:text-textMain text-center transition-colors">
+            ذخیره‌ها
+        </button>
+        <button class="flex-1 py-3 text-sm font-medium text-textSub hover:text-textMain text-center transition-colors">
+            نظرات
+        </button>
+    </div>
     <main class="pb-24">
         <!-- Feed: Experience Cards -->
-        <section class="mt-2 space-y-px bg-outline-variant/10">
-            <!-- Immersive Experience Card 1 -->
-            <article class="bg-background py-6 space-y-4">
-                <div class="px-margin-mobile flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                        <img class="w-10 h-10 rounded-full border border-outline-variant" data-alt="Avatar of the user"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXajKnOXVrMDK_jcXU04PxpHj_tEoqYPs7cgLXNLA9_Dm-HlYb5OkGS5ylSFpMwUjwJVbS2DkRKIyAKWllNJ9pFwmhyr26rCOAWh1-1-z5_W1_IvqHGGFowMKMrJhfNeuIs6B3h05KwfUZptVl_DGYedJErSPrF21yqkdVD7htP65BKdHFa-LkK2d8WLuk4MUiYCQjUHZXchboWM2f1SbhcxDonM554uTdZ20J4cspv4xAK8oEn2JGMgmYeQtcxnzoToPXhAvukDA">
-                        <div>
-                            <p class="font-label-md text-label-md text-on-background">آرش راد</p>
-                            <p class="font-label-sm text-label-sm text-on-surface-variant">۲ ساعت پیش • کافه باغ</p>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
-                </div>
-                <!-- Immersive Media (Larger Aspect Ratio) -->
-                <div class="relative w-full aspect-[4/5] md:aspect-video overflow-hidden">
-                    <img class="w-full h-full object-cover"
-                        data-alt="A breathtaking full-screen shot of a hidden garden cafe in Tehran, with lush green plants surrounding elegant marble tables. The sunlight filters through the leaves, creating a dappled light effect. The focus is sharp on a single cup of traditional tea and a piece of saffron cake. The aesthetic is extremely premium and immersive."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5t2OwvC8nzeC0Ad6mNHH1VpAAhHl9qHmbbp0ECn08rK9WZV40OU4Y47cKSxuSIqMFO9-s_WvKMsjfBm6IBKWGhjIIiXv406yhrzzT68XHyO1GTUJc1TmKokBY8UCYyyu82CrH68CF_gCMlcgSumo3w9osonXSccIcaORtwAdfQ_gNWWhijZgcmHZ769Dc4KpAu0nXc3NllvNIuWfVSxzU3leG_oH8QyhP7qCMHsTYZVDKatbX_lCha1LNSy7k19NQRRm4jvuI2xE">
-                    <div
-                        class="absolute top-4 right-4 bg-black/40 backdrop-blur-md text-white px-3 py-1 rounded-full text-label-sm flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[14px]">photo_library</span>
-                        <span>۱/۴</span>
-                    </div>
-                </div>
-                <div class="px-margin-mobile">
-                    <p class="font-body-md text-body-md text-on-surface line-clamp-3">
-                        تجربه امروز در کافه باغ فوق‌العاده بود. طراحی فضا به شکلیه که حس آرامش رو منتقل می‌کنه. برخورد
-                        پرسنل عالی و کیفیت قهوه واقعاً بالا بود. به خصوص لاته زعفرونی رو پیشنهاد می‌کنم...
-                    </p>
-                    <button class="text-secondary font-label-md text-label-md mt-1">مشاهده بیشتر</button>
-                </div>
-                <div class="px-margin-mobile flex items-center justify-between pt-2">
-                    <div class="flex items-center gap-4">
-                        <div class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-primary"
-                                style="font-variation-settings: 'FILL' 0;">favorite</span>
-                            <span class="font-label-sm text-label-sm">۱۲۴</span>
-                        </div>
-                        <div class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-on-surface-variant">chat_bubble</span>
-                            <span class="font-label-sm text-label-sm">۱۸</span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
-                </div>
-            </article>
+        <section class="space-y-px bg-outline-variant/10">
+            <ReviewsReviewCardMobile :experience="{
+                id: 'exp-123',
+                user: {
+                    name: 'سارا احمدی',
+                    avatar: '/img/avatar/ionibowcher.png',
+                    verified: true
+                },
+                rating: 4.5,
+                timeAgo: '۲ ساعت پیش',
+                text: 'امروز برای صبحانه رفتم کافه ونوس. فضای داخلی فوق‌العاده دنج بود و برخورد پرسنل هم خیلی محترمانه. پنکیک‌هاشون رو حتما پیشنهاد می‌کنم! 🥞☕️',
+                image: '/img/biz/review-image.png',
+                business: {
+                    id: 'cafe-venus',
+                    name: 'کافه رستوران ونوس',
+                    logo: '/img/biz/4.webp',
+                    rating: 4.8,
+                    category: 'کافه و رستوران',
+                    location: 'ولیعصر'
+                },
+                stats: {
+                    useful: 243,
+                    comments: 3,
+                    reposts: 1
+                }
+            }" />
             <!-- Suggested Users (Edge-to-Edge) -->
             <section class="bg-surface-container-low py-8 overflow-hidden">
                 <div class="px-margin-mobile flex items-center justify-between mb-4">
@@ -191,51 +181,7 @@
                     </div>
                 </div>
             </section>
-            <!-- Immersive Experience Card 2 -->
-            <article class="bg-background py-6 space-y-4">
-                <div class="px-margin-mobile flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                        <img class="w-10 h-10 rounded-full border border-outline-variant" data-alt="Avatar"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvB-RiA4YH1mKXvTXACORHPEyfimxyDRmywmg0oN5RyKuurHvXc8950JKCzcVCMD6BmfkUoyXJmqG9Zq432DrZhsZEmk-BtWct3oKzsxBI0X1SO2utX_DsPY0B0ltDIExbnBKv4NVyvDm2PPxjGZ55loXlVXblnzUmgktvTnwdeQfJ0MNaviFQM5X1Z2hvVRUx87KDvO9emzJnGnDCAs-FSRQVqRK_bpU7cVvl9IBcjSeixfEPMLbGmvXJAPem49FiFhZmAZeLNn8">
-                        <div>
-                            <p class="font-label-md text-label-md text-on-background">آرش راد</p>
-                            <p class="font-label-sm text-label-sm text-on-surface-variant">۱ روز پیش • گالری دید</p>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
-                </div>
-                <div class="relative w-full aspect-square overflow-hidden">
-                    <img class="w-full h-full object-cover"
-                        data-alt="A high-contrast, minimalist interior photo of a modern art gallery. A single person is seen from the back, contemplating a large blue canvas. The lighting is dramatic and spotlights the artwork, creating a premium and thoughtful atmosphere."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwaFDLf8PNRpvqsiuLXjKTE9Gcy62ILrjowT_myYwkwjIrpfnw1EYq_xlZJGpgvaAvFJePet_HGVY6eLLR3RMhlpD8teZhm5EnetvONEVAt7L_WvIMUWx5RxtFBKj_U2NSIQ2Z7AQ5WCtzCCSUvBpppmgzDz44yS7_irfSbHMtuq06RLxuDr2dcDvVyWsUfAjCZO2cyXgkHGcHBxOB3stYyfW20VwbPkIairdZStZUtZ2slRxWsKP1RFIlChgJ0Ehsl_-iYKu4rNI">
-                </div>
-                <div class="px-margin-mobile">
-                    <div class="flex gap-2 mb-3">
-                        <span
-                            class="px-3 py-1 bg-chip-blue-bg text-secondary rounded-full font-label-sm text-label-sm">هنر
-                            مدرن</span>
-                        <span
-                            class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-label-sm">تهران</span>
-                    </div>
-                    <p class="font-body-md text-body-md text-on-surface">
-                        نمایشگاه جدید گالری دید واقعاً دیدنیه. مفاهیم عمیقی در آثار نهفته بود که ساعت‌ها فکر رو درگیر
-                        می‌کرد. پیشنهاد می‌کنم حتماً قبل از پایان هفته سر بزنید.
-                    </p>
-                </div>
-                <div class="px-margin-mobile flex items-center justify-between pt-2">
-                    <div class="flex items-center gap-4">
-                        <div class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-on-surface-variant">favorite</span>
-                            <span class="font-label-sm text-label-sm">۸۹</span>
-                        </div>
-                        <div class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-on-surface-variant">chat_bubble</span>
-                            <span class="font-label-sm text-label-sm">۵</span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
-                </div>
-            </article>
+            
         </section>
     </main>
 </template>

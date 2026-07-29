@@ -11,7 +11,7 @@
         </div>
         <div class="flex items-center gap-4">
             <div class="relative">
-                <button class="text-on-surface-variant p-2">
+                <RouterLink to="/notifications" class="relative text-on-surface-variant p-2">
                     <span class="material-symbols-outlined text-2xl">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="#1f1f1f">
@@ -20,8 +20,8 @@
                                 d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
                         </svg>
                     </span>
-                </button>
-                <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+                    <span class="absolute top-[30px] left-0 w-2 h-2 bg-error rounded-full"></span>
+                </RouterLink>
             </div>
         </div>
     </header>
@@ -61,10 +61,9 @@
         </div>
         <div class="flex flex-col gap-2 bg-surface-container-low pt-2">
             <!-- Feed Card 1 -->
-            <article
-                class="bg-surface-container-lowest p-4 rounded-b-2xl sm:rounded-2xl flex flex-col gap-3 shadow-sm mx-0 sm:mx-margin-mobile mb-2">
+            <article class="bg-surface-container-lowest flex flex-col gap-3 shadow-sm mx-0 sm:mx-margin-mobile mb-2">
                 <!-- Header -->
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between px-4 pt-4 pb-2">
                     <div class="flex items-center gap-3">
                         <img alt="سارا احمدی" class="w-10 h-10 rounded-full object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuASOeehWwqz4_GQSfm_E66lE6Pk-HbWcRR8pqm_qgOnLxCG5CDhh8_00Rg9bqMd9Lf1f2fwRyTCoFns2DlqNBO5Yenm9CQS-CrI_lP9JL9tJtFjKfuR2olpx-5y0rButBxE1wtzfIUPSw_3PD0pcnX4fMwLLxMZdFKec9-nmdFxZJC5ApjawyBkibM1QYRH208iQK_x6Scq4aKMsMaxjoJE3H83GMhBEiz7UDyWGAeLo4MQDsl4JGePHWvBrTNpYmN8s4bnj5DcfWY">
@@ -88,24 +87,24 @@
                 </div>
                 <!-- Content Text -->
                 <div>
-                    <p class="text-body-md text-on-surface leading-relaxed">امروز برای کار به این کافه اومدم. فضای بسیار
+                    <p class="text-body-md text-on-surface leading-relaxed px-4">
+                        امروز برای کار به این کافه اومدم. فضای بسیار
                         آرام و نورگیری داره. اینترنت پایدار و پریز برق به تعداد کافی در کنار میزها تعبیه شده. قهوه‌شون
-                        هم کیفیت قابل قبولی داشت.</p>
-
+                        هم کیفیت قابل قبولی داشت.
+                    </p>
                 </div>
                 <!-- Chips -->
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2 px-4">
                     <span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md text-[11px]">#فضای_کار</span>
                     <span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md text-[11px]">#کافه_گردی</span>
                 </div>
                 <!-- Image -->
-                <div class="rounded-2xl overflow-hidden mt-1 h-48 w-full">
+                <div class="overflow-hidden mt-1 h-48 w-full">
                     <img alt="کافه فضای کار" class="w-full h-full object-cover"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOYzwyZohG-TuKKsOH5yDdmx0dmLFCuebq1l1vgbGNGnt3EQSFtCkIpAkdy6PysJ-9eZPcZd7NNwqXigUxCLrifb9KsDKf2bRGgVTMPldL39qFhjxH8oV5ko1D8-03i6Ld1c3u7Bs8--mrzHi_c-7xBOXjbkJo4LmlTzTi4QBE8e7hBB1H-iHWc2_FBNUXh3sklDfb_Dnb5JHYv6GKwQ-gAyt1zWu3sxnQ4ZcyhdPLz0Pus923Yo_5NIXP5oP4jgVI-PSUTPRRyhc">
                 </div>
                 <!-- Location Card -->
-                <div
-                    class="border border-outline-variant rounded-xl p-2 flex items-center gap-3 bg-surface-bright mt-1">
+                <div class="border border-outline-variant rounded-xl p-2 mx-4 flex items-center gap-3 bg-surface-bright mt-1">
                     <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
                         <span class="material-symbols-outlined fill-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px"><g><rect fill="none" height="24" width="24"/></g><g><g/><g><path d="M21.9,8.89l-1.05-4.37c-0.22-0.9-1-1.52-1.91-1.52H5.05C4.15,3,3.36,3.63,3.15,4.52L2.1,8.89 c-0.24,1.02-0.02,2.06,0.62,2.88C2.8,11.88,2.91,11.96,3,12.06V19c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6.94 c0.09-0.09,0.2-0.18,0.28-0.28C21.92,10.96,22.15,9.91,21.9,8.89z M18.91,4.99l1.05,4.37c0.1,0.42,0.01,0.84-0.25,1.17 C19.57,10.71,19.27,11,18.77,11c-0.61,0-1.14-0.49-1.21-1.14L16.98,5L18.91,4.99z M13,5h1.96l0.54,4.52 c0.05,0.39-0.07,0.78-0.33,1.07C14.95,10.85,14.63,11,14.22,11C13.55,11,13,10.41,13,9.69V5z M8.49,9.52L9.04,5H11v4.69 C11,10.41,10.45,11,9.71,11c-0.34,0-0.65-0.15-0.89-0.41C8.57,10.3,8.45,9.91,8.49,9.52z M4.04,9.36L5.05,5h1.97L6.44,9.86 C6.36,10.51,5.84,11,5.23,11c-0.49,0-0.8-0.29-0.93-0.47C4.03,10.21,3.94,9.78,4.04,9.36z M5,19v-6.03C5.08,12.98,5.15,13,5.23,13 c0.87,0,1.66-0.36,2.24-0.95c0.6,0.6,1.4,0.95,2.31,0.95c0.87,0,1.65-0.36,2.23-0.93c0.59,0.57,1.39,0.93,2.29,0.93 c0.84,0,1.64-0.35,2.24-0.95c0.58,0.59,1.37,0.95,2.24,0.95c0.08,0,0.15-0.02,0.23-0.03V19H5z"/></g></g></svg>
@@ -127,7 +126,7 @@
                     </div>
                 </div>
                 <!-- Actions -->
-                <div class="flex items-center justify-between border-t border-outline-variant pt-3 mt-1">
+                <div class="flex items-center justify-between border-t border-outline-variant pt-3 px-4 mt-1">
                     <div class="flex items-center gap-4">
                         <button class="flex items-center gap-1 text-on-surface-variant text-label-sm">
                             <span class="material-symbols-outlined fill-on-surface-variant text-[20px]">
@@ -154,8 +153,7 @@
                     </div>
                 </div>
                 <!-- Business Reply (Nested) -->
-                <div
-                    class="bg-surface-container-lowest border-r-2 border-primary pr-3 pl-2 py-2 mt-2 rounded-l-lg ml-4">
+                <div class="bg-surface-container-lowest border-r-2 border-primary pr-3 pl-2 py-2 my-2 rounded-l-lg mx-4">
                     <div class="flex items-center gap-2 mb-1">
                         <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary">
                             <span class="material-symbols-outlined text-[14px] fill-white">
