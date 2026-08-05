@@ -13,10 +13,11 @@ export default defineNuxtConfig({
     },
     baseURL: '/'
   },
+  site: { indexable: false },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/hints', '@nuxt/image', '@nuxt/test-utils', '@nuxtjs/tailwindcss', '@nuxtjs/device'],
   css: [
     "~/assets/css/main.css"
-  ]
+  ],
 })

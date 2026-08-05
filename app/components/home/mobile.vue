@@ -1,5 +1,5 @@
 <template>
-    <header class="sticky top-0 z-50 bg-surface-container-lowest border-b border-outline-variant px-margin-mobile h-16 flex items-center justify-between">
+    <header class="sticky top-0 z-50 bg-surface-container-lowest px-margin-mobile h-16 flex items-center justify-between">
         <div class="text-headline-md font-bold text-primary flex items-center gap-1">
             <RouterLink class="mb-stack-lg group flex flex-col items-center gap-2" to="/">
                 <div class="flex items-center justify-center">
@@ -13,11 +13,9 @@
             <div class="relative">
                 <RouterLink to="/notifications" class="relative text-on-surface-variant p-2">
                     <span class="material-symbols-outlined text-2xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="#1f1f1f">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#1f1f1f">
                             <path d="M0 0h24v24H0V0z" fill="none" />
-                            <path
-                                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
                         </svg>
                     </span>
                     <span class="absolute top-[30px] left-0 w-2 h-2 bg-error rounded-full"></span>
@@ -27,33 +25,17 @@
     </header>
     <main class="flex-1 flex flex-col w-full">
         <!-- Search & Tabs Section (Sticky below app bar) -->
-        <div class="sticky top-16 z-40 bg-surface-container-lowest border-b border-outline-variant pb-2 shadow-sm">
+        <div class="sticky top-16 z-40 bg-surface-container-lowest shadow-sm">
             <!-- Search Field -->
-            <div class="px-margin-mobile py-3">
-                <div
-                    class="bg-surface-container h-12 rounded-full flex items-center px-4 border border-transparent focus-within:border-primary focus-within:bg-surface-container-lowest transition-colors">
-                    <span class="material-symbols-outlined fill-on-surface-variant">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                    </span>
-                    <input
-                        class="flex-1 bg-transparent border-none text-body-md focus:ring-0 px-2 placeholder:text-outline h-full font-body-md text-on-surface"
-                        placeholder="جستجو برای مکان، تجربه یا افراد..." type="text">
-                    <button class="text-on-surface-variant">
-                        <span class="material-symbols-outlined fill-on-surface">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
-                        </span>
-                    </button>
-                </div>
-            </div>
+            
             <!-- Horizontal Tabs -->
-            <div class="flex overflow-x-auto hide-scrollbar px-margin-mobile gap-6 border-b border-outline-variant">
+            <div class="flex overflow-x-auto justify-between hide-scrollbar px-margin-mobile gap-6 border-b border-outline-variant">
                 <button
                     class="whitespace-nowrap pb-3 text-label-md font-bold text-primary border-b-2 border-primary">برای
                     شما</button>
                 <button
                     class="whitespace-nowrap pb-3 text-label-md font-medium text-on-surface-variant hover:text-on-surface">جدیدترین‌ها</button>
-                <button
-                    class="whitespace-nowrap pb-3 text-label-md font-medium text-on-surface-variant hover:text-on-surface">پربازدید</button>
+                <button class="whitespace-nowrap pb-3 text-label-md font-medium text-on-surface-variant hover:text-on-surface">پربازدید</button>
                 <button
                     class="whitespace-nowrap pb-3 text-label-md font-medium text-on-surface-variant hover:text-on-surface">اطراف
                     من</button>
@@ -153,7 +135,7 @@
                     </div>
                 </div>
                 <!-- Business Reply (Nested) -->
-                <div class="bg-surface-container-lowest border-r-2 border-primary pr-3 pl-2 py-2 my-2 rounded-l-lg mx-4">
+                <div class="bg-surface-container border-r-2 border-primary pr-3 pl-2 py-2 my-2 rounded-l-lg mx-4">
                     <div class="flex items-center gap-2 mb-1">
                         <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary">
                             <span class="material-symbols-outlined text-[14px] fill-white">
@@ -288,3 +270,8 @@
         </div>
     </main>
 </template>
+<style>
+article:last-of-type {
+    margin-bottom: 15px;
+}
+</style>

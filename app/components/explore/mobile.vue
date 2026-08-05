@@ -1,15 +1,14 @@
 <template>
     <div
-        class="sticky top-0 z-50 bg-white backdrop-blur-md pt-4 pb-2 shadow-sm border-b border-border-light">
+        class="sticky top-0 z-50 bg-white backdrop-blur-md pt-4 shadow-sm border-b border-border-light">
         <!-- Top Search Bar -->
         <header class="w-full px-4 flex justify-between items-center gap-3">
             <!-- Search Input Container -->
-            <div
-                class="flex-grow h-12 bg-surface-container-lowest rounded-full border border-border-light flex items-center px-4 focus-within:ring-2 focus-within:ring-primary/20 transition-all shadow-sm">
+            <div class="flex-grow h-12 bg-surface-container-lowest rounded-full border border-border-light flex items-center px-4 focus-within:ring-2 focus-within:ring-primary/20 transition-all shadow-sm">
                 <input
                     class="w-full bg-transparent border-none focus:ring-0 text-body-md font-body-md text-on-surface placeholder-on-surface-variant h-full px-2"
                     dir="rtl" placeholder="جستجو برای مکان، تجربه..." type="text">
-                <span class="material-symbols-outlined fill-on-surface-variant ml-2 shrink-0">
+                <span class="material-symbols-outlined fill-on-surface-variant shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
                 </span>
             </div>
@@ -47,7 +46,7 @@
             </div>
         </div>
         <!-- Sort Tabs -->
-        <div class="flex items-center gap-6 px-4 mt-4 border-b border-border-light/50 overflow-x-auto no-scrollbar">
+        <div class="flex items-center justify-between gap-6 px-4 mt-4 border-b border-border-light/50 overflow-x-auto no-scrollbar">
             <button
                 class="text-primary font-bold text-label-md font-label-md pb-2 border-b-2 border-primary shrink-0">ترندها</button>
             <button
