@@ -1,2 +1,121 @@
-User-Agent: *
+# ==========================================
+# 1. مسدود کردن موتورهای جستجو
+# ==========================================
+
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: BingPreview
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+
+# ==========================================
+# 2. OpenAI
+# ==========================================
+
+# آموزش مدل‌های OpenAI
+User-agent: GPTBot
+Allow: /
+
+# دسترسی ChatGPT هنگام بازدید کاربر از سایت
+User-agent: ChatGPT-User
+Allow: /
+
+# جستجوی OpenAI / ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+
+# ==========================================
+# 3. Google AI / Gemini
+# ==========================================
+
+# ربات Google برای محصولات AI
+User-agent: Google-Extended
+Allow: /
+
+# برخی crawlerهای عمومی Google
+User-agent: GoogleOther
+Allow: /
+
+
+# ==========================================
+# 4. Anthropic / Claude
+# ==========================================
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+
+# ==========================================
+# 5. Perplexity
+# ==========================================
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+
+# ==========================================
+# 6. Microsoft AI / Copilot
+# ==========================================
+
+User-agent: MicrosoftBot
+Allow: /
+
+User-agent: CopilotBot
+Allow: /
+
+
+# ==========================================
+# 7. سایر ربات‌های AI
+# ==========================================
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+
+# ==========================================
+# 8. مسدود کردن سایر ربات‌ها به‌صورت پیش‌فرض
+# ==========================================
+
+User-agent: *
 Disallow: /
