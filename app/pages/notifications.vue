@@ -8,22 +8,22 @@
                 </p>
             </div>
         </div>
-        <div class="flex border-b border-border-light dark:border-border-dark sticky top-0 z-10 bg-white">
+        <div class="flex border-b border-border-light sticky top-0 z-10 bg-white">
             <button
-                class="flex-1 text-center py-4 font-bold text-text-main-light dark:text-text-main-dark border-b-4 border-primary transition-colors relative">
+                class="flex-1 text-center py-4 font-bold text-text-main-light border-b-4 border-primary transition-colors relative">
                 همه
             </button>
             <button
-                class="flex-1 text-center py-4 font-medium text-text-muted-light dark:text-text-muted-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b-4 border-transparent">
+                class="flex-1 text-center py-4 font-medium text-text-muted-light hover:bg-gray-50 transition-colors border-b-4 border-transparent">
                 خوانده نشده
             </button>
         </div>
-        <div class="divide-y divide-border-light dark:divide-border-dark">
+        <div class="divide-y divide-border-light">
             <div
-                class="px-4 py-2 bg-background-light dark:bg-background-dark/50 text-xs font-bold text-text-muted-light dark:text-text-muted-dark sticky top-[62px] z-10">
+                class="px-4 py-2 bg-background-light text-xs font-bold text-text-muted-light sticky top-[62px] z-10">
                 امروز</div>
             <article
-                class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer flex gap-4 bg-blue-50/50 dark:bg-blue-900/10 relative">
+                class="p-4 hover:bg-gray-50 transition-colors cursor-pointer flex gap-4 bg-blue-50/50 relative">
                 <div class="absolute left-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary"></div>
                 <div class="w-10 flex-shrink-0 flex justify-end">
                     <span class="flex items-center justify-start">
@@ -36,13 +36,13 @@
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-1 mb-2">
                         <img alt="کاربر"
-                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark"
+                            class="w-8 h-8 rounded-full border-2 border-surface-light"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4mbkBikx_I1WqnDwivC5ldr-A9Wp_kwsIg1vrV635zUaFqsQEQmuilITyj_z4cb6xysCgBAyNU495J1OgZBaXOMV2lSq3R94R73FeMPdGQdXzumYycWwIe8IGkCwNPC6Zh5_crszoP27UBE3-pxhR_zaNgeIow3PV4_OzupRIUkPLduEffpuagkcrDS3zFiN11KnXkmsDgBr_yZW1ZQphfxveRpn6zjm6Ixorr_CjOeeL7KJAq0eKNvwU9NI7_OyfOdjUqnvHSOM">
                         <img alt="کاربر"
-                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark -mr-3"
+                            class="w-8 h-8 rounded-full border-2 border-surface-light -mr-3"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXL47phmAJERdqLRGjIEMJefLJj58OIBjwLuNdsuunO1XHuEAZIxpQ1-_s56ussbWHLVIVU7IE8wwzpnnqZ_SRfswhvs9Ni1ofA6pr1gvWKlGXp6NpoUWq4uZ5AJSrUb7FhO4Nf4e1WeZRA7H5YboHBQtgyjpA4_0cz3sG0i6QUxna6QQiNw6cDnPzIdn-PooydLbIVy-hLoiCdMl6h3cXBVoy1quZK9QR-BeO9vHohg09Hg8idLO_prljIJ8OZb_LnWZiy4eF4G8">
                         <img alt="کاربر"
-                            class="w-8 h-8 rounded-full border-2 border-surface-light dark:border-surface-dark -mr-3"
+                            class="w-8 h-8 rounded-full border-2 border-surface-light -mr-3"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8cRYJIOfl8pUaUhPbesqHgMuultsEI2PbiW3yTt00GNg9t9S_Vk7SrFwvl5-uRLgrheXQDTpM-NWzHXrUU1RZtm-ulty6sGCrKxUk0Xe3tvGttbJKELG-LOGbQEj20Ag8-j326uIS_K9dyMHw5uXCTNprYlsvfJ2JiO925q2KKqi-8Bm4tVlZbIL2RxxMMNQRW6hUgl8FwUvWoOstkWyxyYJYC-aSDfkkDYADk6w_ZEIpx_mHIxf6aZaKN5KG1GRmqBAuBhczlzo">
                     </div>
                     <p class="text-sm">
@@ -52,7 +52,7 @@
                 </div>
             </article>
             <article
-                class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer flex gap-4 bg-blue-50/50 dark:bg-blue-900/10 relative">
+                class="p-4 hover:bg-gray-50 transition-colors cursor-pointer flex gap-4 bg-blue-50/50 relative">
                 <div class="absolute left-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary"></div>
                 <div class="w-10 flex-shrink-0">
                     <img alt="مریم" class="w-10 h-10 rounded-full"
@@ -62,19 +62,19 @@
                     <p class="text-sm">
                         <span class="font-bold">مریم سلطانی</span> برای تجربه شما نظر ثبت کرد.
                     </p>
-                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">"واقعا فضای
+                    <p class="text-sm text-text-muted-light mt-1 line-clamp-2">"واقعا فضای
                         خوبی داشت، ممنون بابت پیشنهاد عالی!"</p>
                     <button
-                        class="mt-2 text-xs font-medium text-primary border border-border-light dark:border-border-dark px-3 py-1 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+                        class="mt-2 text-xs font-medium text-primary border border-border-light px-3 py-1 rounded-full hover:bg-blue-50 transition-colors">
                         پاسخ
                     </button>
                 </div>
             </article>
             <div
-                class="px-4 py-2 bg-background-light dark:bg-background-dark/50 text-xs font-bold text-text-muted-light dark:text-text-muted-dark sticky top-[62px] z-10 border-t border-border-light dark:border-border-dark">
+                class="px-4 py-2 bg-background-light text-xs font-bold text-text-muted-light sticky top-[62px] z-10 border-t border-border-light">
                 دیروز</div>
             <article
-                class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer flex gap-4 pl-8">
+                class="p-4 hover:bg-gray-50 transition-colors cursor-pointer flex gap-4 pl-8">
                 <div class="w-10 flex-shrink-0">
                     <img alt="علی" class="w-10 h-10 rounded-full"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiSy-LhzDXBHtQmUsp_p_UcXk3oLC3tY5joXH_r9ufqgbdMSL38g6LbWbBDCvpbKrsIxkLUUviEGsHu2wVudo8mmIsgbamARAG9ym1RA3JdvHP9TWQxGnJixRj-UD7D3uc4fEgOkFlcPvobuaxRCyCKgr2e1mK3hv3sZBEf2FmMYeTUiMUpu_q3-jqgRkNwz4BlQyK1UdLHjbmLBC1LjOaLE1862Btf9urdTAozEZNJGgprbLyu9NJOmrX7NbGxK1tLhpTLlX-KMk">
@@ -87,7 +87,7 @@
                 </div>
             </article>
             <article
-                class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer flex gap-4 pl-8">
+                class="p-4 hover:bg-gray-50 transition-colors cursor-pointer flex gap-4 pl-8">
                 <div class="w-10 flex-shrink-0 flex justify-end">
                     <span class="material-icons-round text-3xl">
                         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
@@ -105,8 +105,8 @@
                 </div>
             </article>
             <article
-                class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer flex gap-4 pl-8">
-                <div class="w-10 flex-shrink-0 flex justify-end text-emerald-600 dark:text-emerald-400">
+                class="p-4 hover:bg-gray-50 transition-colors cursor-pointer flex gap-4 pl-8">
+                <div class="w-10 flex-shrink-0 flex justify-end text-emerald-600">
                     <span class="material-icons-round text-3xl">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                             fill="#1f1f1f">
@@ -122,10 +122,10 @@
                 </div>
             </article>
             <div
-                class="px-4 py-2 bg-background-light dark:bg-background-dark/50 text-xs font-bold text-text-muted-light dark:text-text-muted-dark sticky top-[62px] z-10 border-t border-border-light dark:border-border-dark">
+                class="px-4 py-2 bg-background-light text-xs font-bold text-text-muted-light sticky top-[62px] z-10 border-t border-border-light">
                 این هفته</div>
             <article
-                class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer flex gap-4 pl-8">
+                class="p-4 hover:bg-gray-50 transition-colors cursor-pointer flex gap-4 pl-8">
                 <div class="w-10 flex-shrink-0 flex justify-end">
                     <span class="material-icons-round text-3xl">
                         <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
