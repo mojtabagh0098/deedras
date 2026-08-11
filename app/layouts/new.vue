@@ -1,6 +1,6 @@
 <template>
     <main class="max-w-7xl mx-auto md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        <nav class="col-span-1 lg:col-span-2 hidden md:flex flex-col h-screen sticky top-0 py-6 items-center border-l dark:border-outline-variant bg-surface-container-lowest dark:bg-surface-dim shadow-sm flex-shrink-0 z-40">
+        <nav class="col-span-1 lg:col-span-2 hidden md:flex flex-col h-screen sticky top-0 py-6 items-center border-l bg-surface-container-lowest shadow-sm flex-shrink-0 z-40">
             
             <!-- Brand -->
             <RouterLink class="mb-stack-lg group flex flex-col items-center gap-2" to="/">
@@ -20,8 +20,8 @@
                         :class="[
                             'flex flex-col items-center gap-1 p-3 rounded-lg transition-all duration-200',
                             $route.path === '/' 
-                                ? 'text-primary dark:text-primary-fixed-dim font-bold scale-95 bg-surface-container-low dark:bg-surface-container' 
-                                : 'text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container'
+                                ? 'text-primary font-bold scale-95 bg-surface-container-low' 
+                                : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low '
                         ]"
                         to="/">
                         <span class="material-symbols-outlined" :class="{ 'fill-primary': $route.path === '/' }">
@@ -38,8 +38,8 @@
                         :class="[
                             'flex flex-col items-center gap-1 p-3 rounded-lg transition-all duration-200',
                             $route.path === '/explore' 
-                                ? 'text-primary dark:text-primary-fixed-dim font-bold scale-95 bg-surface-container-low dark:bg-surface-container' 
-                                : 'text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container'
+                                ? 'text-primary scale-95 bg-surface-container-low' 
+                                : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'
                         ]"
                         to="/explore">
                         <span class="material-symbols-outlined" :class="{ 'fill-primary': $route.path === '/explore' }">
@@ -61,8 +61,8 @@
                         :class="[
                             'flex flex-col items-center gap-1 p-3 rounded-lg transition-all duration-200',
                             $route.path === '/notifications' 
-                                ? 'text-primary dark:text-primary-fixed-dim font-bold scale-95 bg-surface-container-low dark:bg-surface-container' 
-                                : 'text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container'
+                                ? 'text-primary  scale-95 bg-surface-container-low ' 
+                                : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low '
                         ]"
                         to="/notifications">
                         <span class="material-symbols-outlined relative" :class="{ 'fill-primary': $route.path === '/notifications' }">
@@ -84,8 +84,8 @@
                         :class="[
                             'flex flex-col items-center gap-1 p-3 rounded-lg transition-all duration-200',
                             $route.path === '/saved' 
-                                ? 'text-primary dark:text-primary-fixed-dim font-bold scale-95 bg-surface-container-low dark:bg-surface-container' 
-                                : 'text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container'
+                                ? 'text-primary  scale-95 bg-surface-container-low' 
+                                : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low '
                         ]"
                         to="/saved">
                         <span class="material-symbols-outlined" :class="{ 'fill-primary': $route.path === '/saved' }">

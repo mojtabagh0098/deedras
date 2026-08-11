@@ -40,6 +40,7 @@ const currentStepComponent = computed(() => {
                 <span class="material-symbols-outlined text-base">verified_user</span>
                 <span>تمامی اطلاعات شما نزد دیدرس محفوظ است.</span>
             </div>
+            <div class="footer copyright"></div>
         </div>
     </main>
 </template>
